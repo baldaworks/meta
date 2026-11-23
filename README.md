@@ -9,16 +9,28 @@ Each meta commit pins two projects as Git submodules under `projects/`.
 
 ## Get started
 
-With Git and SSH access to `baldaworks/meta`, clone the workspace and check its pins.
+With Git, SSH access to `baldaworks/meta`, and Task v3.44 or later, clone the workspace and initialize its pinned projects.
 
 ```sh
-git clone --recurse-submodules git@github.com:baldaworks/meta.git
+git clone git@github.com:baldaworks/meta.git
 cd meta
-git submodule status --recursive
+task sync:pins
+task --list
 ```
 
-If you already cloned the repository without its submodules, run `task sync:pins` from the root to initialize the recorded revisions. Use `task sync` to update the workspace to the published meta `main`.
+## Sync commands
 
-With Task v3.44 or later installed, run `task --list` to see both projects’ commands. The root Taskfile runs `balda:*` tasks in `projects/balda` and `knowl:*` tasks in `projects/knowl`.
+Run these commands from the workspace root.
+
+| Command | Effect |
+| --- | --- |
+| `task sync` | Switch to meta `main`, fast-forward to the published revision, and check out its project pins. |
+| `task sync:pins` | Check out the project revisions recorded by the current meta commit. |
+| `task sibling:fetch PROJECT=knowl` | Fetch updates in the standalone Knowl clone and show its current branch status. |
+| `task sibling:sync PROJECT=knowl` | Fetch updates in the standalone Knowl clone, switch it to `main`, and fast-forward it. |
+
+Both sibling commands accept `PROJECT=balda` or `PROJECT=knowl` and look for the clone under `~/Projects`. Pass `PROJECTS_DIR=/path/to/projects` to use another parent directory.
+
+For project tasks, use the `balda:` or `knowl:` prefix from the workspace root, for example `task balda:arch-lint` or `task knowl:wiki:validate`.
 
 See the [workspace runbook](docs/runbooks/workspace.md) to sync checkouts, update a project pin or roll it back.
