@@ -19,34 +19,25 @@ git submodule foreach --recursive 'git status --short --branch'
 Commit or stash edits in the repository that owns them. If a submodule has local commits on a detached HEAD, give them a branch name before updating. Then fast-forward the meta repository, refresh the configured submodule URLs, and check out the revisions recorded in the new meta commit.
 
 ```sh
-git switch main &&
-  git fetch origin main &&
-  git merge-base --is-ancestor HEAD origin/main &&
-  git merge --ff-only origin/main &&
-  git submodule sync --recursive &&
-  git submodule update --init --recursive &&
-  git submodule status --recursive
+task sync
 ```
 
 A leading space means the checkout matches its pin. A minus sign means the submodule needs initialization. A plus sign means its checkout differs from the pin. Review local work before updating it.
 
-If the sequence stops at `merge-base`, local `main` contains unpublished commits. Inspect `git log --oneline --left-right main...origin/main`, preserve the local commits on a branch, and reconcile them before retrying. If a submodule download fails, check access to its URL in `.gitmodules`, then rerun the sync and update commands.
+If `task sync` reports unpublished commits, local `main` contains unpublished commits. Inspect `git log --oneline --left-right main...origin/main`, preserve the local commits on a branch, and reconcile them before retrying. If a submodule download fails, check access to its URL in `.gitmodules`, then rerun `task sync:pins` to finish checking out the recorded revisions.
 
 ## Sync a sibling project checkout
 
-The standalone checkouts at `~/Projects/balda` and `~/Projects/knowl` share their project remotes with the submodules. Each checkout has its own branch and working tree. To refresh remote refs while continuing work on the current branch, run this from the meta root for the desired project.
+The standalone checkouts at `~/Projects/balda` and `~/Projects/knowl` share their project remotes with the submodules. Each checkout has its own branch and working tree. To refresh remote refs while continuing work on the current branch, run this from the meta root with `PROJECT=balda` or `PROJECT=knowl`. If your standalone clones live elsewhere, pass `PROJECTS_DIR=/path/to/projects`.
 
 ```sh
-project=knowl
-git -C "$HOME/Projects/$project" fetch origin &&
-  git -C "$HOME/Projects/$project" status --short --branch
+task sibling:fetch PROJECT=knowl
 ```
 
 When you want to update the sibling's local `main`, first save any working changes there. Then run
 
 ```sh
-git -C "$HOME/Projects/$project" switch main &&
-  git -C "$HOME/Projects/$project" merge --ff-only origin/main
+task sibling:sync PROJECT=knowl
 ```
 
 To bring a sibling change into the shared workspace, publish it through the project's usual workflow. Once it lands on the project's `main`, follow the pin update below.
@@ -83,4 +74,4 @@ git commit -m "chore: update $project pin"
 
 Publish the meta commit through the usual review or push workflow. Other workspaces can then pick it up with the [workspace sync procedure](#sync-an-existing-workspace-to-the-published-pins).
 
-To undo a published pin update, revert its meta commit and run `git submodule update --init --recursive` to check out the restored revision.
+To undo a published pin update, revert its meta commit and run `task sync:pins` to check out the restored revision.

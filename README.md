@@ -17,8 +17,8 @@ cd meta
 git submodule status --recursive
 ```
 
-If you already cloned the repository without its submodules, run `git submodule update --init --recursive` from the root.
+If you already cloned the repository without its submodules, run `task sync:pins` from the root to initialize the recorded revisions. Use `task sync` to update the workspace to the published meta `main`.
 
-With Task v3 installed, run `task --list` to see both projects’ commands. The root Taskfile runs `balda:*` tasks in `projects/balda` and `knowl:*` tasks in `projects/knowl`.
+With Task v3.44 or later installed, run `task --list` to see both projects’ commands. The root Taskfile runs `balda:*` tasks in `projects/balda` and `knowl:*` tasks in `projects/knowl`.
 
 See the [workspace runbook](docs/runbooks/workspace.md) to sync checkouts, update a project pin or roll it back.

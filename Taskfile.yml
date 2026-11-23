@@ -1,9 +1,62 @@
 version: "3"
 
+vars:
+  PROJECTS_DIR: '{{.HOME}}/Projects'
+
 includes:
   balda:
     taskfile: ./projects/balda/Taskfile.yml
+    optional: true
     dir: ./projects/balda
   knowl:
     taskfile: ./projects/knowl/Taskfile.yml
+    optional: true
     dir: ./projects/knowl
+
+tasks:
+  sync:
+    desc: Fast-forward meta main and check out its published submodule pins
+    cmds:
+      - git switch main
+      - git fetch origin main
+      - |
+        if ! git merge-base --is-ancestor HEAD FETCH_HEAD; then
+          echo "Local main has unpublished commits. Inspect git log --left-right main...FETCH_HEAD." >&2
+          exit 1
+        fi
+      - git merge --ff-only FETCH_HEAD
+      - task: sync:pins
+
+  sync:pins:
+    desc: Initialize and check out the submodule revisions recorded by meta
+    cmds:
+      - git submodule sync --recursive
+      - git submodule update --init --recursive
+      - git submodule status --recursive
+
+  sibling:fetch:
+    desc: Fetch a standalone project and show its current branch status
+    requires:
+      vars:
+        - name: PROJECT
+          enum: [balda, knowl]
+    env:
+      SIBLING_DIR: '{{.PROJECTS_DIR}}/{{.PROJECT}}'
+    cmds:
+      - git -C "$SIBLING_DIR" fetch origin
+      - git -C "$SIBLING_DIR" status --short --branch
+
+  sibling:sync:
+    desc: Fetch and fast-forward a standalone project's main branch
+    requires:
+      vars:
+        - name: PROJECT
+          enum: [balda, knowl]
+    env:
+      SIBLING_DIR: '{{.PROJECTS_DIR}}/{{.PROJECT}}'
+    cmds:
+      - task: sibling:fetch
+        vars:
+          PROJECT: '{{.PROJECT}}'
+      - git -C "$SIBLING_DIR" switch main
+      - git -C "$SIBLING_DIR" merge --ff-only origin/main
