@@ -171,3 +171,48 @@ tasks:
       PROJECT_NAME: '{{.PROJECT}}'
     cmds:
       - git submodule add --name "$PROJECT_NAME" "https://github.com/baldaworks/$PROJECT_NAME.git" "projects/$PROJECT_NAME"
+
+  worktree:add:
+    desc: Create a project worktree from fresh main or the meta pin
+    requires: &worktree_inputs
+      vars:
+        - name: PROJECT
+          enum: *projects
+        - WORK
+    env: &worktree_env
+      WT_PROJECTS_DIR: '{{.PROJECTS_DIR}}'
+      WT_PROJECT: '{{.PROJECT}}'
+      WT_WORK: '{{.WORK | default ""}}'
+      WT_BASE: '{{.BASE | default "main"}}'
+      WT_TARGET: '{{.TARGET | default ""}}'
+    cmds:
+      - sh scripts/worktree.sh add
+
+  worktree:list:
+    desc: List a standalone project's registered worktrees and branches
+    requires:
+      vars:
+        - name: PROJECT
+          enum: *projects
+    env: *worktree_env
+    cmds:
+      - sh scripts/worktree.sh list
+
+  worktree:run:
+    desc: Run a project task inside the selected worktree
+    requires:
+      vars:
+        - name: PROJECT
+          enum: *projects
+        - WORK
+        - TARGET
+    env: *worktree_env
+    cmds:
+      - sh scripts/worktree.sh run
+
+  worktree:remove:
+    desc: Remove a clean project worktree and retain its branch
+    requires: *worktree_inputs
+    env: *worktree_env
+    cmds:
+      - sh scripts/worktree.sh remove

@@ -55,3 +55,35 @@ task sync:publish
 ```
 
 Use the same `PROJECT` value throughout for the project you want to pin.
+
+## Work on a project branch
+
+Keep the meta checkout at its recorded pins. Create feature worktrees from the standalone clone at `~/Projects/<project>`. Pass `PROJECTS_DIR` on each command if your clones live elsewhere.
+
+```sh
+task worktree:add PROJECT=balda WORK=chat-fix
+task worktree:list PROJECT=balda
+task worktree:run PROJECT=balda WORK=chat-fix TARGET=arch-lint
+```
+
+The first command fetches the project's published `main` and creates branch `feature/chat-fix` at `~/Projects/.worktrees/chat-fix/balda`. Use a distinct work name for each feature. To reproduce the exact Balda revision in the current meta commit, create a separate worktree with `BASE=pin`.
+
+```sh
+task worktree:add PROJECT=balda WORK=reproduce-chat BASE=pin
+```
+
+For a change spanning projects, reuse the work name across those projects. Each project gets its own branch and pull request. Run checks against each worktree and point any integration test at those checkouts.
+
+```sh
+task worktree:add PROJECT=knowl WORK=chat-fix
+task worktree:run PROJECT=knowl WORK=chat-fix TARGET=wiki:validate
+```
+
+`worktree:run` uses the Taskfile in the selected worktree. Root commands such as `task balda:arch-lint` still use the pinned checkout. For projects without a Taskfile, add, list and remove are available.
+
+After merging the project branches, [update their shared pins](#change-a-shared-pin). Remove each clean worktree when finished. Removal keeps the local branch and stops if the worktree has pending changes.
+
+```sh
+task worktree:remove PROJECT=balda WORK=chat-fix
+task worktree:remove PROJECT=knowl WORK=chat-fix
+```
