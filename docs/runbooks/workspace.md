@@ -21,7 +21,19 @@ Run `task sync` to switch meta to `main`, fast-forward it, and apply its pins. T
 
 ## Sync a standalone checkout
 
-Use the [sibling tasks](../../README.md#sync-commands) for clones under `~/Projects`. Save local edits before `sync:sibling` switches branches. If the local and remote branches have diverged, inspect their history in the standalone checkout before retrying. Changes enter the shared workspace when you publish a new pin.
+To fetch updates in `~/Projects/knowl` and inspect the current branch, run
+
+```sh
+task sync:sibling:fetch PROJECT=knowl
+```
+
+To update the clone's `main`, save local edits first. This command fetches, switches to `main`, and fast-forwards it.
+
+```sh
+task sync:sibling PROJECT=knowl
+```
+
+For Balda, use `PROJECT=balda`. If the clones live outside `~/Projects`, pass `PROJECTS_DIR=/path/to/projects` to either command. If the branches have diverged, inspect their history in the standalone checkout before retrying. To use the updated revision in meta, update its pin below.
 
 ## Update a project pin
 
