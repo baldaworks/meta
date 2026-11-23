@@ -9,11 +9,9 @@ Each meta commit pins two projects as Git submodules under `projects/`.
 
 ## Get started
 
-With Git, SSH access to `baldaworks/meta`, and Task v3.44 or later, clone the workspace and initialize its pinned projects.
+Clone `baldaworks/meta` with your Git client. From the checkout root, use Task v3.44 or later to initialize the pinned projects and list available operations.
 
 ```sh
-git clone git@github.com:baldaworks/meta.git
-cd meta
 task sync:pins
 task --list
 ```

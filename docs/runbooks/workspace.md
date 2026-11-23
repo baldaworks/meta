@@ -1,57 +1,57 @@
 # Workspace operations
 
-For the first checkout, follow the [README](../../README.md#get-started). Run the commands below from the meta root.
+Run these tasks from the meta root. For the first checkout, see the [README](../../README.md#get-started).
 
 ## Sync the workspace
 
-Before switching revisions, check for local work in the meta repository and its submodules.
+Check for local work before switching revisions. Preserve any edits or detached commits you want to keep.
 
 ```sh
-git status --short --branch
-git submodule foreach --recursive 'git status --short --branch'
+task sync:status
+task sync
 ```
 
-Commit or stash edits in the checkout that owns them. If a detached submodule has commits you want to keep, create a branch there first.
+`task sync` fast-forwards meta `main` and applies its pins. If it reports unpublished commits, `task sync:status` shows how local and remote main differ. To initialize submodules, retry a failed download, or return to the recorded pins after previewing a change, run
 
-Run `task sync` to switch meta to `main`, fast-forward it, and apply its pins. To apply the pins already recorded in your checkout, run `task sync:pins`.
-
-- **Unpublished meta commits:** inspect `git log --oneline --left-right main...FETCH_HEAD` and reconcile the commits before retrying.
-- **Submodule download failed:** check access to the URL in `.gitmodules`, then retry `task sync:pins`.
-- **Unexpected checkout:** run `git submodule status --recursive`. A leading space means the pin matches, `-` means uninitialized, `+` means a different commit, and `U` means a merge conflict.
+```sh
+task sync:pins
+```
 
 ## Sync a standalone checkout
 
-To fetch updates in `~/Projects/knowl` and inspect the current branch, run
+Fetch updates in the standalone clone and show its current branch status.
 
 ```sh
 task sync:sibling:fetch PROJECT=knowl
 ```
 
-To update the clone's `main`, save local edits first. This command fetches, switches to `main`, and fast-forwards it.
+To switch the standalone clone to `main` and fast-forward it, run
 
 ```sh
 task sync:sibling PROJECT=knowl
 ```
 
-For Balda, use `PROJECT=balda`. If the clones live outside `~/Projects`, pass `PROJECTS_DIR=/path/to/projects` to either command. If the branches have diverged, inspect their history in the standalone checkout before retrying. To use the updated revision in meta, update its pin below.
+Both commands accept `PROJECT=balda` or `PROJECT=knowl`. They look under `~/Projects` by default. Pass `PROJECTS_DIR=/path/to/projects` for another location.
 
-## Update a project pin
+## Change a shared pin
 
-Start from a clean, initialized workspace. After the project change lands on its published `main`, fetch and review the revision to pin. Use `project=balda` or `project=knowl`.
-
-```sh
-project=balda
-git -C "projects/$project" fetch origin main &&
-  git -C "projects/$project" switch --detach FETCH_HEAD &&
-  git diff --submodule=log -- "projects/$project"
-```
-
-After verifying the revision, record it in meta and publish the commit.
+Start from the published pins. To preview the change to Balda's published `main`, run
 
 ```sh
-git add -- "projects/$project"
-git diff --cached --submodule=log
-git commit -m "chore: update $project pin"
+task sync:pin:update PROJECT=balda
 ```
 
-To roll back a published pin, run `git revert <pin-update-commit>` in meta, apply the restored pins with `task sync:pins`, and publish the revert.
+For a rollback, preview the previous Balda revision in meta's history instead.
+
+```sh
+task sync:pin:rollback PROJECT=balda
+```
+
+Review the displayed commits. To discard the preview, run `task sync:pins`. To record it and publish the current meta branch, run
+
+```sh
+task sync:pin:record PROJECT=balda
+task sync:publish
+```
+
+Use `PROJECT=knowl` throughout for Knowl.

@@ -21,7 +21,7 @@ tasks:
       - git fetch origin main
       - |
         if ! git merge-base --is-ancestor HEAD FETCH_HEAD; then
-          echo "Local main has unpublished commits. Inspect git log --left-right main...FETCH_HEAD." >&2
+          echo "Local main has unpublished commits. Run task sync:status to inspect the workspace." >&2
           exit 1
         fi
       - git merge --ff-only FETCH_HEAD
@@ -60,3 +60,77 @@ tasks:
           PROJECT: '{{.PROJECT}}'
       - git -C "$SIBLING_DIR" switch main
       - git -C "$SIBLING_DIR" merge --ff-only origin/main
+
+  sync:status:
+    desc: Show local changes, project pins and meta main's divergence from origin
+    cmds:
+      - git status --short --branch
+      - git submodule status --recursive
+      - git submodule foreach --recursive 'git status --short --branch'
+      - git log --oneline --left-right main...origin/main
+
+  sync:pin:update:
+    desc: Prepare and display a pin update to the published project main
+    cmds:
+      - task: prepare-pin
+        vars: {PROJECT: '{{.PROJECT}}', ACTION: update}
+
+  sync:pin:rollback:
+    desc: Prepare and display the previous pin for one project
+    cmds:
+      - task: prepare-pin
+        vars: {PROJECT: '{{.PROJECT}}', ACTION: rollback}
+
+  prepare-pin:
+    internal: true
+    requires:
+      vars:
+        - name: PROJECT
+          enum: [balda, knowl]
+    env:
+      PIN_PATH: 'projects/{{.PROJECT}}'
+      PIN_ACTION: '{{.ACTION}}'
+    preconditions:
+      - sh: test -z "$(git status --porcelain --ignore-submodules=none -- "$PIN_PATH")"
+        msg: The project has local changes. Inspect them with task sync:status.
+    cmds:
+      - git submodule update --init -- "$PIN_PATH"
+      - |
+        set -eu
+        if [ "$PIN_ACTION" = update ]; then
+          git -C "$PIN_PATH" fetch origin main
+          revision=$(git -C "$PIN_PATH" rev-parse FETCH_HEAD)
+        else
+          change=$(git log -1 --first-parent --format=%H HEAD -- "$PIN_PATH")
+          revision=$(git rev-parse --verify "$change^:$PIN_PATH") || {
+            echo "No previous pin exists at $PIN_PATH." >&2
+            exit 1
+          }
+        fi
+        git -C "$PIN_PATH" switch --detach "$revision"
+        git diff --submodule=log -- "$PIN_PATH"
+
+  sync:pin:record:
+    desc: Commit the reviewed project pin in meta
+    requires:
+      vars:
+        - name: PROJECT
+          enum: [balda, knowl]
+    env:
+      PIN_PATH: 'projects/{{.PROJECT}}'
+    preconditions:
+      - sh: test -e "$PIN_PATH/.git" && test -z "$(git -C "$PIN_PATH" status --porcelain)"
+        msg: Initialize the project and preserve any local edits before recording its pin.
+    cmds:
+      - |
+        set -eu
+        if git diff --quiet HEAD -- "$PIN_PATH"; then
+          echo "Pin already recorded."
+        else
+          git commit --only -m "chore: update ${PIN_PATH#projects/} pin" -- "$PIN_PATH"
+        fi
+
+  sync:publish:
+    desc: Push the current meta branch to origin
+    cmds:
+      - git push origin HEAD
