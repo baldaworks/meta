@@ -34,6 +34,11 @@ includes:
     optional: true
     dir: ./projects/acprun
 
+  mcpdump:
+    taskfile: ./projects/mcpdump
+    optional: true
+    dir: ./projects/mcpdump
+
 tasks:
   sync:
     desc: Fast-forward meta main and check out its published submodule pins
@@ -60,7 +65,7 @@ tasks:
     requires:
       vars:
         - name: PROJECT
-          enum: &projects [balda, knowl, acpbench, acpboss, acpchat, acpdump, acprun, codex-acp]
+          enum: &projects [acpbench, acpboss, acpchat, acpdump, acprun, balda, boyan, callee, codex-acp, go-actorlayer, hostplugin, knowl, mcpdump, prism, prism-callee, promptkitty]
     env:
       SIBLING_DIR: '{{.PROJECTS_DIR}}/{{.PROJECT}}'
     cmds:
@@ -155,3 +160,14 @@ tasks:
     desc: Push the current meta branch to origin
     cmds:
       - git push origin HEAD
+
+  sync:project:add:
+    desc: Register a workspace project as a Git submodule
+    requires:
+      vars:
+        - name: PROJECT
+          enum: *projects
+    env:
+      PROJECT_NAME: '{{.PROJECT}}'
+    cmds:
+      - git submodule add --name "$PROJECT_NAME" "https://github.com/baldaworks/$PROJECT_NAME.git" "projects/$PROJECT_NAME"

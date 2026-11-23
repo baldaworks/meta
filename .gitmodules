@@ -22,3 +22,27 @@
 [submodule "codex-acp"]
 	path = projects/codex-acp
 	url = https://github.com/baldaworks/codex-acp.git
+[submodule "boyan"]
+	path = projects/boyan
+	url = https://github.com/baldaworks/boyan.git
+[submodule "callee"]
+	path = projects/callee
+	url = https://github.com/baldaworks/callee.git
+[submodule "go-actorlayer"]
+	path = projects/go-actorlayer
+	url = https://github.com/baldaworks/go-actorlayer.git
+[submodule "hostplugin"]
+	path = projects/hostplugin
+	url = https://github.com/baldaworks/hostplugin.git
+[submodule "mcpdump"]
+	path = projects/mcpdump
+	url = https://github.com/baldaworks/mcpdump.git
+[submodule "prism"]
+	path = projects/prism
+	url = https://github.com/baldaworks/prism.git
+[submodule "prism-callee"]
+	path = projects/prism-callee
+	url = https://github.com/baldaworks/prism-callee.git
+[submodule "promptkitty"]
+	path = projects/promptkitty
+	url = https://github.com/baldaworks/promptkitty.git

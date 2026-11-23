@@ -10,8 +10,16 @@ Each meta commit pins the workspace projects as Git submodules under `projects/`
 | [acpdump](https://github.com/baldaworks/acpdump) | Inspect ACP agent capabilities |
 | [acprun](https://github.com/baldaworks/acprun) | Discover and run agents from the ACP Registry |
 | [balda](https://github.com/baldaworks/balda) | Self-hosted engineering agent for team chat |
+| [boyan](https://github.com/baldaworks/boyan) | Temporal memory for AI agents |
+| [callee](https://github.com/baldaworks/callee) | Run Markdown-defined agents and workflows over ACP |
 | [codex-acp](https://github.com/baldaworks/codex-acp) | Connect Codex to ACP clients |
+| [go-actorlayer](https://github.com/baldaworks/go-actorlayer) | Go runtime for message routing, retries and settlement |
+| [hostplugin](https://github.com/baldaworks/hostplugin) | Build portable plugins for coding agents |
 | [knowl](https://github.com/baldaworks/knowl) | Self-hosted project wiki maintained from source documents |
+| [mcpdump](https://github.com/baldaworks/mcpdump) | Inspect stdio MCP servers and their capabilities |
+| [prism](https://github.com/baldaworks/prism) | Manage software delivery workflows with Beads |
+| [prism-callee](https://github.com/baldaworks/prism-callee) | Run Prism workflows through Callee agents |
+| [promptkitty](https://github.com/baldaworks/promptkitty) | Discover and assemble PromptKit prompts and workflows |
 
 ## Get started
 
