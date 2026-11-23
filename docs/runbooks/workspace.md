@@ -1,70 +1,40 @@
-# Working with the Baldaworks meta repository
+# Workspace operations
 
-## Get the pinned projects
+For the first checkout, follow the [README](../../README.md#get-started). Run the commands below from the meta root.
 
-```sh
-git clone --recurse-submodules git@github.com:baldaworks/meta.git
-cd meta
-```
+## Sync the workspace
 
-## Sync an existing workspace to the published pins
-
-Start at the meta root. Check for local changes and submodule commits you want to keep.
+Before switching revisions, check for local work in the meta repository and its submodules.
 
 ```sh
 git status --short --branch
 git submodule foreach --recursive 'git status --short --branch'
 ```
 
-Commit or stash edits in the repository that owns them. If a submodule has local commits on a detached HEAD, give them a branch name before updating. Then fast-forward the meta repository, refresh the configured submodule URLs, and check out the revisions recorded in the new meta commit.
+Commit or stash edits in the checkout that owns them. If a detached submodule has commits you want to keep, create a branch there first.
 
-```sh
-task sync
-```
+Run `task sync` to switch meta to `main`, fast-forward it, and apply its pins. To apply the pins already recorded in your checkout, run `task sync:pins`.
 
-A leading space means the checkout matches its pin. A minus sign means the submodule needs initialization. A plus sign means its checkout differs from the pin. Review local work before updating it.
+- **Unpublished meta commits:** inspect `git log --oneline --left-right main...FETCH_HEAD` and reconcile the commits before retrying.
+- **Submodule download failed:** check access to the URL in `.gitmodules`, then retry `task sync:pins`.
+- **Unexpected checkout:** run `git submodule status --recursive`. A leading space means the pin matches, `-` means uninitialized, `+` means a different commit, and `U` means a merge conflict.
 
-If `task sync` reports unpublished commits, local `main` contains unpublished commits. Inspect `git log --oneline --left-right main...origin/main`, preserve the local commits on a branch, and reconcile them before retrying. If a submodule download fails, check access to its URL in `.gitmodules`, then rerun `task sync:pins` to finish checking out the recorded revisions.
+## Sync a standalone checkout
 
-## Sync a sibling project checkout
+Use the [sibling tasks](../../README.md#sync-commands) for clones under `~/Projects`. Save local edits before `sibling:sync` switches branches. If the local and remote branches have diverged, inspect their history in the standalone checkout before retrying. Changes enter the shared workspace when you publish a new pin.
 
-The standalone checkouts at `~/Projects/balda` and `~/Projects/knowl` share their project remotes with the submodules. Each checkout has its own branch and working tree. To refresh remote refs while continuing work on the current branch, run this from the meta root with `PROJECT=balda` or `PROJECT=knowl`. If your standalone clones live elsewhere, pass `PROJECTS_DIR=/path/to/projects`.
+## Update a project pin
 
-```sh
-task sibling:fetch PROJECT=knowl
-```
-
-When you want to update the sibling's local `main`, first save any working changes there. Then run
-
-```sh
-task sibling:sync PROJECT=knowl
-```
-
-To bring a sibling change into the shared workspace, publish it through the project's usual workflow. Once it lands on the project's `main`, follow the pin update below.
-
-## Find the project tools
-
-Run `task --list` at the workspace root to see both projects' tasks. Use the project prefix to run a task in its submodule directory.
-
-```sh
-task balda:arch-lint
-task knowl:wiki:validate
-```
-
-Balda provides tasks for local development, architecture checks and runtime inspection. The pinned runtime guide is at `projects/balda/docs/balda.md`. Knowl provides wiki generation and validation tasks. Its pinned guides are at `projects/knowl/docs/local.md` and `projects/knowl/docs/operations.md`.
-
-## Update one pin
-
-From a clean meta checkout, choose either project and fetch its published main branch. The example updates Balda.
+Start from a clean, initialized workspace. After the project change lands on its published `main`, fetch and review the revision to pin. Use `project=balda` or `project=knowl`.
 
 ```sh
 project=balda
 git -C "projects/$project" fetch origin main &&
-  git -C "projects/$project" switch --detach FETCH_HEAD
-git diff --submodule=log -- "projects/$project"
+  git -C "projects/$project" switch --detach FETCH_HEAD &&
+  git diff --submodule=log -- "projects/$project"
 ```
 
-After reviewing the commits and verifying the intended revision, record the pin in the meta repository.
+After verifying the revision, record it in meta and publish the commit.
 
 ```sh
 git add -- "projects/$project"
@@ -72,6 +42,4 @@ git diff --cached --submodule=log
 git commit -m "chore: update $project pin"
 ```
 
-Publish the meta commit through the usual review or push workflow. Other workspaces can then pick it up with the [workspace sync procedure](#sync-an-existing-workspace-to-the-published-pins).
-
-To undo a published pin update, revert its meta commit and run `task sync:pins` to check out the restored revision.
+To roll back a published pin, run `git revert <pin-update-commit>` in meta, apply the restored pins with `task sync:pins`, and publish the revert.
