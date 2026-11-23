@@ -87,3 +87,14 @@ After merging the project branches, [update their shared pins](#change-a-shared-
 task worktree:remove PROJECT=balda WORK=chat-fix
 task worktree:remove PROJECT=knowl WORK=chat-fix
 ```
+
+## Install agent skills
+
+Run `task apm:install` to install the locked skills in the project. Run `task apm:install GLOBAL=true` to install the packages declared in `apm.yml` for the current Codex user. Both commands require the APM CLI. After changing `apm.yml`, run `task apm:lock` and commit both the manifest and lockfile.
+
+[Stitch skills guide](https://stitch.google.com/docs/skills/get-started/)
+
+
+## Balda Backoffice UI
+
+Install the workspace skills with `task apm:install` and use `balda-backoffice` when designing, implementing or reviewing Backoffice changes. Look up the route and state in the [Balda Backoffice Stitch project](https://stitch.withgoogle.com/projects/4792710364374043045). Make design changes there first, then compare the implementation in the Balda worktree against those screens using Playwright.
