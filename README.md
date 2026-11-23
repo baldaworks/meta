@@ -2,10 +2,10 @@
 
 Each meta commit pins the workspace projects as Git submodules under `projects/`.
 
-| Project | Purpose |
+| Repository | Purpose |
 | --- | --- |
-| [Balda](https://github.com/baldaworks/balda) | Self-hosted engineering agent for team chat |
-| [Knowl](https://github.com/baldaworks/knowl) | Self-hosted project wiki maintained from source documents |
+| [balda](https://github.com/baldaworks/balda) | Self-hosted engineering agent for team chat |
+| [knowl](https://github.com/baldaworks/knowl) | Self-hosted project wiki maintained from source documents |
 | [acpbench](https://github.com/baldaworks/acpbench) | Benchmark ACP servers over stdio |
 | [acpboss](https://github.com/baldaworks/acpboss) | Route requests to multiple ACP providers |
 | [acpchat](https://github.com/baldaworks/acpchat) | Chat with ACP agents in the terminal |
