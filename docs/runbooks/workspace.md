@@ -20,7 +20,9 @@ Commit or stash edits in the repository that owns them. If a submodule has local
 
 ```sh
 git switch main &&
-  git pull --ff-only origin main &&
+  git fetch origin main &&
+  git merge-base --is-ancestor HEAD origin/main &&
+  git merge --ff-only origin/main &&
   git submodule sync --recursive &&
   git submodule update --init --recursive &&
   git submodule status --recursive
@@ -28,7 +30,7 @@ git switch main &&
 
 A leading space means the checkout matches its pin. A minus sign means the submodule needs initialization. A plus sign means its checkout differs from the pin. Review local work before updating it.
 
-If the pull reports divergent history, inspect `git log --oneline --left-right main...origin/main` and reconcile the local commits before retrying. If a submodule download fails, check access to its URL in `.gitmodules`, then rerun the sync and update commands.
+If the sequence stops at `merge-base`, local `main` contains unpublished commits. Inspect `git log --oneline --left-right main...origin/main`, preserve the local commits on a branch, and reconcile them before retrying. If a submodule download fails, check access to its URL in `.gitmodules`, then rerun the sync and update commands.
 
 ## Sync a sibling project checkout
 
@@ -36,15 +38,15 @@ The standalone checkouts at `~/Projects/balda` and `~/Projects/knowl` share thei
 
 ```sh
 project=knowl
-git -C "../$project" fetch origin &&
-  git -C "../$project" status --short --branch
+git -C "$HOME/Projects/$project" fetch origin &&
+  git -C "$HOME/Projects/$project" status --short --branch
 ```
 
 When you want to update the sibling's local `main`, first save any working changes there. Then run
 
 ```sh
-git -C "../$project" switch main &&
-  git -C "../$project" merge --ff-only origin/main
+git -C "$HOME/Projects/$project" switch main &&
+  git -C "$HOME/Projects/$project" merge --ff-only origin/main
 ```
 
 To bring a sibling change into the shared workspace, publish it through the project's usual workflow. Once it lands on the project's `main`, follow the pin update below.
@@ -58,7 +60,7 @@ task balda:arch-lint
 task knowl:wiki:validate
 ```
 
-Balda provides tasks for local development, architecture checks and runtime inspection. See its [runtime guide](../../projects/balda/docs/balda.md). Knowl provides wiki generation and validation tasks. See its [local setup](../../projects/knowl/docs/local.md) and [operations guide](../../projects/knowl/docs/operations.md).
+Balda provides tasks for local development, architecture checks and runtime inspection. The pinned runtime guide is at `projects/balda/docs/balda.md`. Knowl provides wiki generation and validation tasks. Its pinned guides are at `projects/knowl/docs/local.md` and `projects/knowl/docs/operations.md`.
 
 ## Update one pin
 
