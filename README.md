@@ -4,14 +4,14 @@ Each meta commit pins the workspace projects as Git submodules under `projects/`
 
 | Repository | Purpose |
 | --- | --- |
-| [balda](https://github.com/baldaworks/balda) | Self-hosted engineering agent for team chat |
-| [knowl](https://github.com/baldaworks/knowl) | Self-hosted project wiki maintained from source documents |
 | [acpbench](https://github.com/baldaworks/acpbench) | Benchmark ACP servers over stdio |
 | [acpboss](https://github.com/baldaworks/acpboss) | Route requests to multiple ACP providers |
 | [acpchat](https://github.com/baldaworks/acpchat) | Chat with ACP agents in the terminal |
 | [acpdump](https://github.com/baldaworks/acpdump) | Inspect ACP agent capabilities |
 | [acprun](https://github.com/baldaworks/acprun) | Discover and run agents from the ACP Registry |
+| [balda](https://github.com/baldaworks/balda) | Self-hosted engineering agent for team chat |
 | [codex-acp](https://github.com/baldaworks/codex-acp) | Connect Codex to ACP clients |
+| [knowl](https://github.com/baldaworks/knowl) | Self-hosted project wiki maintained from source documents |
 
 ## Get started
 
