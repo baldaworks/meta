@@ -58,7 +58,7 @@ task balda:arch-lint
 task knowl:wiki:validate
 ```
 
-Balda provides tasks for local development, architecture checks and runtime inspection. See its [runtime guide](../../balda/docs/balda.md). Knowl provides wiki generation and validation tasks. See its [local setup](../../knowl/docs/local.md) and [operations guide](../../knowl/docs/operations.md).
+Balda provides tasks for local development, architecture checks and runtime inspection. See its [runtime guide](../../projects/balda/docs/balda.md). Knowl provides wiki generation and validation tasks. See its [local setup](../../projects/knowl/docs/local.md) and [operations guide](../../projects/knowl/docs/operations.md).
 
 ## Update one pin
 
@@ -66,15 +66,15 @@ From a clean meta checkout, choose either project and fetch its published main b
 
 ```sh
 project=balda
-git -C "$project" fetch origin main &&
-  git -C "$project" switch --detach FETCH_HEAD
-git diff --submodule=log -- "$project"
+git -C "projects/$project" fetch origin main &&
+  git -C "projects/$project" switch --detach FETCH_HEAD
+git diff --submodule=log -- "projects/$project"
 ```
 
 After reviewing the commits and verifying the intended revision, record the pin in the meta repository.
 
 ```sh
-git add -- "$project"
+git add -- "projects/$project"
 git diff --cached --submodule=log
 git commit -m "chore: update $project pin"
 ```

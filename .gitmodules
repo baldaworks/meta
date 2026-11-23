@@ -1,6 +1,6 @@
 [submodule "balda"]
-	path = balda
+	path = projects/balda
 	url = https://github.com/baldaworks/balda.git
 [submodule "knowl"]
-	path = knowl
+	path = projects/knowl
 	url = https://github.com/baldaworks/knowl.git
