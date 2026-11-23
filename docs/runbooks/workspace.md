@@ -20,11 +20,11 @@ A leading space means the checkout matches its pin. A minus sign means the submo
 
 ## Find the project tools
 
-Use Task to list commands from the pinned project versions.
+Run `task --list` at the workspace root to see both projects' tasks. Use the project prefix to run a task in its submodule directory.
 
 ```sh
-task --dir balda --list
-task --dir knowl --list
+task balda:arch-lint
+task knowl:wiki:validate
 ```
 
 Balda provides tasks for local development, architecture checks and runtime inspection. See its [runtime guide](../../balda/docs/balda.md). Knowl provides wiki generation and validation tasks. See its [local setup](../../knowl/docs/local.md) and [operations guide](../../knowl/docs/operations.md).

@@ -1,0 +1,9 @@
+version: "3"
+
+includes:
+  balda:
+    taskfile: ./balda/Taskfile.yml
+    dir: ./balda
+  knowl:
+    taskfile: ./knowl/Taskfile.yml
+    dir: ./knowl
