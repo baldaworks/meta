@@ -34,7 +34,7 @@ tasks:
       - git submodule update --init --recursive
       - git submodule status --recursive
 
-  sibling:fetch:
+  sync:sibling:fetch:
     desc: Fetch a standalone project and show its current branch status
     requires:
       vars:
@@ -46,7 +46,7 @@ tasks:
       - git -C "$SIBLING_DIR" fetch origin
       - git -C "$SIBLING_DIR" status --short --branch
 
-  sibling:sync:
+  sync:sibling:
     desc: Fetch and fast-forward a standalone project's main branch
     requires:
       vars:
@@ -55,7 +55,7 @@ tasks:
     env:
       SIBLING_DIR: '{{.PROJECTS_DIR}}/{{.PROJECT}}'
     cmds:
-      - task: sibling:fetch
+      - task: sync:sibling:fetch
         vars:
           PROJECT: '{{.PROJECT}}'
       - git -C "$SIBLING_DIR" switch main

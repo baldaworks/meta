@@ -26,8 +26,8 @@ Run these commands from the workspace root.
 | --- | --- |
 | `task sync` | Switch to meta `main`, fast-forward to the published revision, and check out its project pins. |
 | `task sync:pins` | Initialize or update submodules to the pins recorded in the meta index. |
-| `task sibling:fetch PROJECT=knowl` | Fetch updates in the standalone Knowl clone and show its current branch status. |
-| `task sibling:sync PROJECT=knowl` | Fetch updates in the standalone Knowl clone, switch it to `main`, and fast-forward it. |
+| `task sync:sibling:fetch PROJECT=knowl` | Fetch updates in the standalone Knowl clone and show its current branch status. |
+| `task sync:sibling PROJECT=knowl` | Fetch updates in the standalone Knowl clone, switch it to `main`, and fast-forward it. |
 
 Both sibling commands accept `PROJECT=balda` or `PROJECT=knowl` and look for the clone under `~/Projects`. Pass `PROJECTS_DIR=/path/to/projects` to use another parent directory.
 
