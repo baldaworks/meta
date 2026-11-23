@@ -13,6 +13,27 @@ includes:
     optional: true
     dir: ./projects/knowl
 
+  acpbench:
+    taskfile: ./projects/acpbench
+    optional: true
+    dir: ./projects/acpbench
+  acpboss:
+    taskfile: ./projects/acpboss
+    optional: true
+    dir: ./projects/acpboss
+  acpchat:
+    taskfile: ./projects/acpchat
+    optional: true
+    dir: ./projects/acpchat
+  acpdump:
+    taskfile: ./projects/acpdump
+    optional: true
+    dir: ./projects/acpdump
+  acprun:
+    taskfile: ./projects/acprun
+    optional: true
+    dir: ./projects/acprun
+
 tasks:
   sync:
     desc: Fast-forward meta main and check out its published submodule pins
@@ -39,7 +60,7 @@ tasks:
     requires:
       vars:
         - name: PROJECT
-          enum: [balda, knowl]
+          enum: &projects [balda, knowl, acpbench, acpboss, acpchat, acpdump, acprun, codex-acp]
     env:
       SIBLING_DIR: '{{.PROJECTS_DIR}}/{{.PROJECT}}'
     cmds:
@@ -51,7 +72,7 @@ tasks:
     requires:
       vars:
         - name: PROJECT
-          enum: [balda, knowl]
+          enum: *projects
     env:
       SIBLING_DIR: '{{.PROJECTS_DIR}}/{{.PROJECT}}'
     cmds:
@@ -86,7 +107,7 @@ tasks:
     requires:
       vars:
         - name: PROJECT
-          enum: [balda, knowl]
+          enum: *projects
     env:
       PIN_PATH: 'projects/{{.PROJECT}}'
       PIN_ACTION: '{{.ACTION}}'
@@ -115,7 +136,7 @@ tasks:
     requires:
       vars:
         - name: PROJECT
-          enum: [balda, knowl]
+          enum: *projects
     env:
       PIN_PATH: 'projects/{{.PROJECT}}'
     preconditions:

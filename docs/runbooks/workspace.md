@@ -31,7 +31,7 @@ To switch the standalone clone to `main` and fast-forward it, run
 task sync:sibling PROJECT=knowl
 ```
 
-Both commands accept `PROJECT=balda` or `PROJECT=knowl`. They look under `~/Projects` by default. Pass `PROJECTS_DIR=/path/to/projects` for another location.
+Both commands accept any project in the [workspace project list](../../README.md). They look under `~/Projects` by default. Pass `PROJECTS_DIR=/path/to/projects` for another location.
 
 ## Change a shared pin
 
@@ -54,4 +54,4 @@ task sync:pin:record PROJECT=balda
 task sync:publish
 ```
 
-Use `PROJECT=knowl` throughout for Knowl.
+Use the same `PROJECT` value throughout for the project you want to pin.

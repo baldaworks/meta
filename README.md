@@ -1,11 +1,17 @@
 # Baldaworks meta
 
-Each meta commit pins two projects as Git submodules under `projects/`.
+Each meta commit pins the workspace projects as Git submodules under `projects/`.
 
 | Project | Purpose |
 | --- | --- |
 | [Balda](https://github.com/baldaworks/balda) | Self-hosted engineering agent for team chat |
 | [Knowl](https://github.com/baldaworks/knowl) | Self-hosted project wiki maintained from source documents |
+| [acpbench](https://github.com/baldaworks/acpbench) | Benchmark ACP servers over stdio |
+| [acpboss](https://github.com/baldaworks/acpboss) | Route requests to multiple ACP providers |
+| [acpchat](https://github.com/baldaworks/acpchat) | Chat with ACP agents in the terminal |
+| [acpdump](https://github.com/baldaworks/acpdump) | Inspect ACP agent capabilities |
+| [acprun](https://github.com/baldaworks/acprun) | Discover and run agents from the ACP Registry |
+| [codex-acp](https://github.com/baldaworks/codex-acp) | Connect Codex to ACP clients |
 
 ## Get started
 
@@ -27,8 +33,8 @@ Run these commands from the workspace root.
 | `task sync:sibling:fetch PROJECT=knowl` | Fetch updates in the standalone Knowl clone and show its current branch status. |
 | `task sync:sibling PROJECT=knowl` | Fetch updates in the standalone Knowl clone, switch it to `main`, and fast-forward it. |
 
-Both sibling commands accept `PROJECT=balda` or `PROJECT=knowl` and look for the clone under `~/Projects`. Pass `PROJECTS_DIR=/path/to/projects` to use another parent directory.
+Both sibling commands accept any project listed above and look for the clone under `~/Projects`. Pass `PROJECTS_DIR=/path/to/projects` to use another parent directory.
 
-For project tasks, use the `balda:` or `knowl:` prefix from the workspace root, for example `task balda:arch-lint` or `task knowl:wiki:validate`.
+For project tasks, use the project name as the task prefix from the workspace root, for example `task balda:arch-lint` or `task acpchat:test`. Only projects with a Taskfile expose product tasks.
 
 The [workspace runbook](docs/runbooks/workspace.md) covers sync failures, pin updates and rollback.

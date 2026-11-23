@@ -4,3 +4,21 @@
 [submodule "knowl"]
 	path = projects/knowl
 	url = https://github.com/baldaworks/knowl.git
+[submodule "acpbench"]
+	path = projects/acpbench
+	url = https://github.com/baldaworks/acpbench.git
+[submodule "acpboss"]
+	path = projects/acpboss
+	url = https://github.com/baldaworks/acpboss.git
+[submodule "acpchat"]
+	path = projects/acpchat
+	url = https://github.com/baldaworks/acpchat.git
+[submodule "acpdump"]
+	path = projects/acpdump
+	url = https://github.com/baldaworks/acpdump.git
+[submodule "acprun"]
+	path = projects/acprun
+	url = https://github.com/baldaworks/acprun.git
+[submodule "codex-acp"]
+	path = projects/codex-acp
+	url = https://github.com/baldaworks/codex-acp.git
