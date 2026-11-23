@@ -1,0 +1,6 @@
+[submodule "balda"]
+	path = balda
+	url = https://github.com/baldaworks/balda.git
+[submodule "knowl"]
+	path = knowl
+	url = https://github.com/baldaworks/knowl.git
