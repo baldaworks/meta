@@ -40,6 +40,26 @@ includes:
     dir: ./projects/mcpdump
 
 tasks:
+  apm:install:
+    desc: Install workspace skills locally or for the current Codex user (GLOBAL=true)
+    vars:
+      GLOBAL: '{{.GLOBAL | default "false"}}'
+      MANIFEST_YAML:
+        sh: cat apm.yml
+      MANIFEST:
+        ref: fromYaml .MANIFEST_YAML
+    requires:
+      vars:
+        - name: GLOBAL
+          enum: ["true", "false"]
+    cmds:
+      - '{{if eq .GLOBAL "true"}}apm install --global --target codex{{range .MANIFEST.dependencies.apm}} {{shellQuote .}}{{end}}{{else}}apm install --frozen{{end}}'
+
+  apm:lock:
+    desc: Install project skills and refresh the APM lockfile after manifest changes
+    cmds:
+      - apm install
+
   sync:
     desc: Fast-forward meta main and check out its published submodule pins
     cmds:
