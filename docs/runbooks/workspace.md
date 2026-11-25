@@ -100,3 +100,5 @@ Run `task apm:install` to install the locked skills in the project. Run `task ap
 ## Balda Backoffice UI
 
 Install the workspace skills with `task apm:install` and use `balda-backoffice` when designing, implementing or reviewing Backoffice changes. Look up the route and state in the [Balda Backoffice Stitch project](https://stitch.withgoogle.com/projects/4792710364374043045). Make design changes there first, then compare the implementation in the Balda worktree against those screens using Playwright. The import tasks are for explicitly requested baselines.
+
+Use `task backoffice:preview` to serve the pinned QA application. For a requested baseline import, `task backoffice:stitch:import` captures the checked-in synthetic QA export and uploads pending routes. To resume an interrupted upload from the existing capture, run `task backoffice:stitch:upload`.
