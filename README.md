@@ -20,6 +20,7 @@ Each meta commit pins the workspace projects as Git submodules under `projects/`
 | [prism](https://github.com/baldaworks/prism) | Manage software delivery workflows with Beads |
 | [prism-callee](https://github.com/baldaworks/prism-callee) | Run Prism workflows through Callee agents |
 | [promptkitty](https://github.com/baldaworks/promptkitty) | Discover and assemble PromptKit prompts and workflows |
+| [runtime](https://github.com/baldaworks/runtime) | Reusable Go packages for building agent runtimes |
 
 ## Get started
 

@@ -129,7 +129,7 @@ tasks:
     requires:
       vars:
         - name: PROJECT
-          enum: &projects [acpbench, acpboss, acpchat, acpdump, acprun, balda, boyan, callee, codex-acp, go-actorlayer, hostplugin, knowl, mcpdump, prism, prism-callee, promptkitty]
+          enum: &projects [acpbench, acpboss, acpchat, acpdump, acprun, balda, boyan, callee, codex-acp, go-actorlayer, hostplugin, knowl, mcpdump, prism, prism-callee, promptkitty, runtime]
     env:
       SIBLING_DIR: '{{.PROJECTS_DIR}}/{{.PROJECT}}'
     cmds:

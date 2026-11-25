@@ -46,3 +46,6 @@
 [submodule "promptkitty"]
 	path = projects/promptkitty
 	url = https://github.com/baldaworks/promptkitty.git
+[submodule "runtime"]
+	path = projects/runtime
+	url = https://github.com/baldaworks/runtime.git
