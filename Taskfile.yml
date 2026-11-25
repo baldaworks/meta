@@ -93,7 +93,7 @@ tasks:
       - go run ./cmd/balda backoffice qa serve --listen 127.0.0.1:8096
 
   apm:install:
-    desc: Install workspace skills locally or for the current Codex user (GLOBAL=true)
+    desc: Install workspace skills locally or for the current user across manifest targets (GLOBAL=true)
     vars:
       GLOBAL: '{{.GLOBAL | default "false"}}'
       MANIFEST_YAML:
@@ -105,7 +105,19 @@ tasks:
         - name: GLOBAL
           enum: ["true", "false"]
     cmds:
-      - '{{if eq .GLOBAL "true"}}apm install --global --target codex{{range .MANIFEST.dependencies.apm}} {{shellQuote .}}{{end}}{{else}}apm install --frozen{{end}}'
+      - |
+        {{if eq .GLOBAL "true" -}}
+        set --
+        for package in {{range .MANIFEST.dependencies.apm}}{{shellQuote .}} {{end}}; do
+          case "$package" in
+            ./*|../*) package="$PWD/$package" ;;
+          esac
+          set -- "$@" "$package"
+        done
+        apm install --global --target {{.MANIFEST.targets | join "," | shellQuote}} "$@"
+        {{else -}}
+        apm install --frozen
+        {{end}}
 
   apm:lock:
     desc: Install project skills and refresh the APM lockfile after manifest changes

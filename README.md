@@ -33,12 +33,12 @@ task --list
 
 ## Agent skills with APM
 
-This workspace uses Agent Package Manager (APM) to install Codex skills for Google Stitch and Balda Backoffice. Install the CLI from the [official APM guide](https://microsoft.github.io/apm/), then run the appropriate Task command from the checkout root.
+This workspace uses Agent Package Manager (APM) to install Google Stitch and Balda Backoffice skills for Codex and OpenCode. Install the CLI from the [official APM guide](https://microsoft.github.io/apm/), then run the appropriate Task command from the checkout root.
 
 | Goal | Command |
 | --- | --- |
 | Install the locked skills in this checkout under `.agents/skills/` | `task apm:install` |
-| Install the manifest’s skills for the current Codex user across projects | `task apm:install GLOBAL=true` |
+| Install the skills for the current user across projects in Codex and OpenCode | `task apm:install GLOBAL=true` |
 | Refresh the lockfile and local installation after editing the manifest | `task apm:lock` |
 
 The [manifest](apm.yml) lists the local Balda Backoffice skill and pins the upstream Stitch skills. The [workspace runbook](docs/runbooks/workspace.md#install-agent-skills) explains how to add a skill, update its revision and verify a frozen installation.

@@ -94,7 +94,7 @@ task worktree:remove PROJECT=knowl WORK=chat-fix
 
 On first checkout, `task init` applies the recorded project pins and then runs `task apm:install`. To refresh skills after pulling changes, run `task apm:install` from the meta root. This uses the committed [lockfile](../../apm.lock.yaml) in frozen mode and installs skills under `.agents/skills/`. Edit workspace-owned skills under `skills/`; APM manages the installed copies.
 
-For skills available across projects, run `task apm:install GLOBAL=true`. This installs the packages listed in [apm.yml](../../apm.yml) for the current Codex user. Rerun it after a manifest update if you use the global installation.
+For skills available across projects, run `task apm:install GLOBAL=true`. This installs the packages for the current user in all targets listed in [apm.yml](../../apm.yml), currently Codex and OpenCode. Rerun it after a manifest update if you use the global installation.
 
 ### Add or update a skill
 
