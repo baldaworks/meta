@@ -6,14 +6,18 @@ from pathlib import Path
 import tomllib
 import urllib.request
 
-root = Path(__file__).resolve().parent
+workspace = Path(__file__).resolve().parents[2] / ".stitch" / "balda-backoffice"
+pointer = workspace / "current"
+if not pointer.is_file():
+    raise SystemExit("Run task backoffice:stitch:capture first")
+root = workspace / pointer.read_text().strip()
 project = "projects/4792710364374043045"
 url = "https://stitch.googleapis.com/v1/" + project + "/screens:batchCreate"
 key = os.environ.get("STITCH_API_KEY")
 if not key:
     config = Path(os.environ.get("CODEX_HOME", Path.home()/".codex"))/"config.toml"
     key = tomllib.loads(config.read_text())["mcp_servers"]["stitch"]["http_headers"]["X-Goog-Api-Key"]
-rows = json.loads((root/"qa/routes.json").read_text())
+rows = json.loads((root/"routes.json").read_text())
 for row in rows:
     if not (root/"screens"/row["File"]).is_file():
         raise SystemExit("Run Playwright capture before upload")

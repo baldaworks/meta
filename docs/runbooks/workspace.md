@@ -108,4 +108,6 @@ See the [APM documentation](https://microsoft.github.io/apm/) and the [Stitch sk
 
 Install the workspace skills with `task apm:install` and use `balda-backoffice` when designing, implementing or reviewing Backoffice changes. Look up the route and state in the [Balda Backoffice Stitch project](https://stitch.withgoogle.com/projects/4792710364374043045). Make design changes there first, then compare the implementation in the Balda worktree against those screens using Playwright. The import tasks are for explicitly requested baselines.
 
-Use `task backoffice:preview` to serve the pinned QA application. For a requested baseline import, `task backoffice:stitch:import` captures the checked-in synthetic QA export and uploads pending routes. To resume an interrupted upload from the existing capture, run `task backoffice:stitch:upload`.
+Use `task backoffice:preview` to browse the synthetic QA application. Run `task backoffice:stitch:capture` to capture the pinned Balda gallery locally with Playwright. The task starts its own loopback server and discovers routes from the gallery index.
+
+For an explicitly requested new baseline, `task backoffice:stitch:import` captures the gallery and creates screens in Stitch. To resume the most recent capture’s upload, use `task backoffice:stitch:upload`. Each capture has its own route list and upload journal under the ignored `.stitch/balda-backoffice/` directory.

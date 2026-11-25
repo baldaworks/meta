@@ -51,7 +51,13 @@ tasks:
       - gh pr {{range .CLI_ARGS_LIST}}{{shellQuote .}} {{end}}
 
   backoffice:stitch:import:
-    desc: Capture the Balda QA export with Playwright and upload all routes to Stitch
+    desc: Capture a new Balda QA baseline and upload it to Stitch
+    cmds:
+      - task: backoffice:stitch:capture
+      - task: backoffice:stitch:upload
+
+  backoffice:stitch:capture:
+    desc: Capture all screens from the pinned synthetic QA gallery locally
     vars:
       E2E_DIR: '{{.ROOT_DIR}}/projects/balda/qa/backoffice-e2e'
     env:
@@ -60,13 +66,17 @@ tasks:
       - test -d "$E2E_DIR/node_modules/playwright" || npm ci --prefix "$E2E_DIR" --no-audit --no-fund
       - |
         node -e 'const fs = require("node:fs"); const {chromium} = require(process.env.E2E_DIR + "/node_modules/playwright"); process.exit(fs.existsSync(chromium.executablePath()) ? 0 : 1)' || "$E2E_DIR/node_modules/.bin/playwright" install chromium
-      - node .stitch/balda-backoffice/capture.cjs "$E2E_DIR"
-      - task: backoffice:stitch:upload
+      - |
+        set -eu
+        build=$(mktemp -d)
+        trap 'rm -f "$build/balda"; rmdir "$build"' EXIT
+        go -C projects/balda build -o "$build/balda" ./cmd/balda
+        node scripts/stitch/capture.cjs "$E2E_DIR" "$build/balda"
 
   backoffice:stitch:upload:
     desc: Upload captured Balda QA screens and resume from saved progress
     cmds:
-      - python3 .stitch/balda-backoffice/upload.py
+      - python3 scripts/stitch/upload.py
 
   backoffice:preview:
     desc: Serve the pinned Balda Backoffice with synthetic QA data

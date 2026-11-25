@@ -1,6 +1,4 @@
 apm_modules/
 /.agents/skills/
 /.apm/cache/
-/.stitch/balda-backoffice/screens/
-/.stitch/balda-backoffice/receipts.jsonl
-/.stitch/balda-backoffice/uploaded.tmp
+/.stitch/
