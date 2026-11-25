@@ -40,6 +40,40 @@ includes:
     dir: ./projects/mcpdump
 
 tasks:
+  sync:git:
+    desc: Run a Git operation in the meta repository
+    cmds:
+      - git {{range .CLI_ARGS_LIST}}{{shellQuote .}} {{end}}
+
+  review:pr:
+    desc: Manage a GitHub pull request (pass gh pr arguments after --)
+    cmds:
+      - gh pr {{range .CLI_ARGS_LIST}}{{shellQuote .}} {{end}}
+
+  backoffice:stitch:import:
+    desc: Capture the Balda QA export with Playwright and upload all routes to Stitch
+    vars:
+      E2E_DIR: '{{.ROOT_DIR}}/projects/balda/qa/backoffice-e2e'
+    env:
+      E2E_DIR: '{{.E2E_DIR}}'
+    cmds:
+      - test -d "$E2E_DIR/node_modules/playwright" || npm ci --prefix "$E2E_DIR" --no-audit --no-fund
+      - |
+        node -e 'const fs = require("node:fs"); const {chromium} = require(process.env.E2E_DIR + "/node_modules/playwright"); process.exit(fs.existsSync(chromium.executablePath()) ? 0 : 1)' || "$E2E_DIR/node_modules/.bin/playwright" install chromium
+      - node .stitch/balda-backoffice/capture.cjs "$E2E_DIR"
+      - task: backoffice:stitch:upload
+
+  backoffice:stitch:upload:
+    desc: Upload captured Balda QA screens and resume from saved progress
+    cmds:
+      - python3 .stitch/balda-backoffice/upload.py
+
+  backoffice:preview:
+    desc: Serve the pinned Balda Backoffice with synthetic QA data
+    dir: projects/balda
+    cmds:
+      - go run ./cmd/balda backoffice qa serve --listen 127.0.0.1:8096
+
   apm:install:
     desc: Install workspace skills locally or for the current Codex user (GLOBAL=true)
     vars:
@@ -236,3 +270,17 @@ tasks:
     env: *worktree_env
     cmds:
       - sh scripts/worktree.sh remove
+
+  worktree:beads:
+    desc: Run Beads in a project worktree (pass bd arguments after --)
+    requires: *worktree_inputs
+    env: *worktree_env
+    cmds:
+      - sh scripts/worktree.sh beads {{range .CLI_ARGS_LIST}}{{shellQuote .}} {{end}}
+
+  worktree:git:
+    desc: Run Git in the selected project worktree (pass arguments after --)
+    requires: *worktree_inputs
+    env: *worktree_env
+    cmds:
+      - sh scripts/worktree.sh git {{range .CLI_ARGS_LIST}}{{shellQuote .}} {{end}}

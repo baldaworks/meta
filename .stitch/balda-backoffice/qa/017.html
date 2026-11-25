@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en" data-bs-theme="dark" data-lte-color-mode="off">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Account · QA</title>
+  <link rel="icon" type="image/png" href="/assets/baldaworks-logo.2f170e666ef7bcd0.png">
+  <link rel="stylesheet" href="/assets/vendor/adminlte/adminlte.min.css">
+  <link rel="stylesheet" href="/assets/vendor/bootstrap-icons/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="/assets/app.2f134ef117c5730c.css">
+</head>
+<body class="layout-fixed fixed-header sidebar-expand-lg bg-body-tertiary" data-refresh-path="/qa/ui/auth/session/refresh">
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<div class="app-wrapper">
+  
+  <header class="app-header navbar navbar-expand" aria-label="Utility navigation">
+    <div class="container-fluid">
+      <button class="nav-link btn btn-link sidebar-toggle" type="button" data-lte-toggle="sidebar" aria-label="Toggle navigation" aria-controls="primary-sidebar" aria-expanded="true"><i class="bi bi-list" aria-hidden="true"></i></button>
+      <div class="viewer-actions ms-auto"><span class="viewer"><i class="bi bi-person-circle" aria-hidden="true"></i> <span class="viewer-prefix">Signed in as </span><strong title="qa-superuser">qa-superuser</strong></span>
+        <a class="btn btn-sm btn-outline-secondary" href="/qa/ui/account" hx-boost="true" hx-target="#main-content" hx-swap="outerHTML" hx-push-url="true" aria-label="Your account"><i class="bi bi-person" aria-hidden="true"></i><span class="d-none d-sm-inline"> Account</span></a>
+        <form method="post" action="/qa/ui/logout" hx-boost="false" class="m-0"><input type="hidden" name="csrf_token" value="qa-csrf"><button class="btn btn-sm btn-outline-secondary" type="submit" disabled title="Synthetic preview"><i class="bi bi-box-arrow-right" aria-hidden="true"></i><span class="d-none d-sm-inline"> Sign out</span><span class="visually-hidden d-sm-none">Sign out</span></button></form>
+      </div>
+    </div>
+  </header>
+  <aside id="primary-sidebar" class="app-sidebar shadow" data-bs-theme="dark">
+    <div class="sidebar-brand"><a href="/qa/ui/overview" class="brand-link"><img class="brand-logo" src="/assets/baldaworks-logo.2f170e666ef7bcd0.png" alt="" aria-hidden="true"><span class="brand-text">Balda</span></a></div>
+    <div class="sidebar-wrapper"><nav aria-label="Primary navigation"><ul class="nav sidebar-menu flex-column" role="list">
+      <li class="nav-section"><h2 class="nav-section-title" id="nav-workspace">Workspace</h2><ul class="nav flex-column" role="list" aria-labelledby="nav-workspace"><li class="nav-item"><a class="nav-link" data-nav-link href="/qa/ui/overview" hx-boost="true" hx-target="#main-content" hx-swap="outerHTML" hx-push-url="true"><i class="nav-icon bi bi-speedometer2" aria-hidden="true"></i><p>Overview</p></a></li><li class="nav-item"><a class="nav-link" data-nav-link href="/qa/ui/agent" hx-boost="true" hx-target="#main-content" hx-swap="outerHTML" hx-push-url="true"><i class="nav-icon bi bi-robot" aria-hidden="true"></i><p>Agent</p></a></li></ul></li>
+    </ul></nav></div>
+  </aside>
+  
+  <div class="app-main" hx-history-elt><div id="request-error" class="alert alert-danger m-3" role="alert" tabindex="-1" hidden></div><main hx-history="false" id="main-content" class="app-content" tabindex="-1"><div class="container-fluid">
+<header class="content-header"><div><p class="section-kicker">Your workspace</p><h1>Account</h1><p>Your profile, browser credential and active sessions.</p></div></header>
+
+<div class="detail-grid mb-4">
+    <section aria-labelledby="profile-heading" class="card"><header class="card-header"><h2 id="profile-heading" class="card-title">Profile</h2></header><div class="card-body"><dl class="fact-list"><dt>Display name</dt><dd>Bound operator</dd><dt>Username</dt><dd>operator</dd><dt>Role</dt><dd>operator</dd><dt>Chat bindings</dt><dd><div><code>telegram:42</code> — Operator<div>Telegram username: @operator; first name: Op</div></div><div><code>slackagent:T1:U1</code> — Operator Slack</div></dd></dl></div></section>
+    <section aria-labelledby="password-heading" class="card"><header class="card-header"><h2 id="password-heading" class="card-title">Change password</h2></header><div class="card-body"><form method="post" action="/qa/ui/account/password" data-mutation-form hx-post="/qa/ui/account/password" hx-target="#main-content" hx-swap="outerHTML"><input type="hidden" name="csrf_token" value="qa-csrf"><div class="row g-3"><div class="col-12"><label for="account-current-password" class="form-label">Current password</label><input id="account-current-password" name="current_password" type="password" data-write-only class="form-control" autocomplete="current-password" required></div><div class="col-12"><label for="account-new-password" class="form-label">New password</label><input id="account-new-password" name="new_password" type="password" data-write-only class="form-control" autocomplete="new-password" minlength="12" maxlength="72" required></div></div><p class="form-text">Changing the password signs out your other browser sessions.</p><button class="btn btn-primary" type="submit">Change password</button><span class="mutation-status" role="status" aria-live="polite" hidden>Submitting…</span></form></div></section>
+</div>
+
+
+<section aria-labelledby="sessions-heading" class="card mb-4"><header class="card-header"><h2 id="sessions-heading" class="card-title">Browser session state preview</h2><span class="count-badge">4 shown</span></header><div class="card-body">
+  <p class="text-body-secondary">Synthetic active, ended, and expired examples are shown together to check their controls. “Last sign-in or refresh” is the latest recorded event, not every page visit.</p>
+  <div class="detail-grid">
+    
+    <article class="session-card">
+      <h3 class="h6">Firefox on Linux <span class="status-chip status-chip--info">Current</span></h3>
+      <p class="mb-2"><strong>Last sign-in or refresh:</strong> <time datetime="2026-09-23T12:00:00Z">23 Sep 2026, 12:00 UTC</time></p>
+      <p class="mb-2"><strong>Connection peer:</strong> <code>192.0.2.10</code> <span class="text-body-secondary">(may be a proxy)</span></p>
+      <details class="mb-3"><summary>Session dates</summary><p class="mb-1">Created: <time datetime="2026-09-23T11:00:00Z">23 Sep 2026, 11:00 UTC</time></p><p class="mb-0">Expires: <time datetime="2026-09-24T00:00:00Z">24 Sep 2026, 00:00 UTC</time></p></details>
+      <form action="/qa/ui/account/sessions/family-demo/revoke" method="post" data-mutation-form hx-post="/qa/ui/account/sessions/family-demo/revoke" hx-target="#main-content" hx-swap="outerHTML" data-confirm-title="End session?" data-confirm-message="End Firefox on Linux session last used 23 Sep 2026, 12:00 UTC. This will sign you out." data-confirm-action="End session"><input type="hidden" name="csrf_token" value="qa-csrf"><input type="hidden" name="confirm_current" value="yes" data-confirm-consent disabled><button class="btn btn-sm btn-outline-danger" type="submit">End session</button><span class="mutation-status" role="status" aria-live="polite" hidden>Submitting…</span></form>
+    </article>
+    
+    <article class="session-card">
+      <h3 class="h6">Unknown browser or device </h3>
+      <p class="mb-2"><strong>Last sign-in or refresh:</strong> <time datetime="2026-09-23T11:00:00Z">23 Sep 2026, 11:00 UTC</time></p>
+      <p class="mb-2"><strong>Connection peer:</strong> Unknown <span class="text-body-secondary">(may be a proxy)</span></p>
+      <details class="mb-3"><summary>Session dates</summary><p class="mb-1">Created: <time datetime="2026-09-23T10:00:00Z">23 Sep 2026, 10:00 UTC</time></p><p class="mb-0">Expires: <time datetime="2026-09-23T23:00:00Z">23 Sep 2026, 23:00 UTC</time></p></details>
+      <form action="/qa/ui/account/sessions/family-other/revoke" method="post" data-mutation-form hx-post="/qa/ui/account/sessions/family-other/revoke" hx-target="#main-content" hx-swap="outerHTML" data-confirm-title="End session?" data-confirm-message="End Unknown browser or device session last used 23 Sep 2026, 11:00 UTC. That browser will lose access." data-confirm-action="End session"><input type="hidden" name="csrf_token" value="qa-csrf"><input type="hidden" name="confirm_current" value="yes" data-confirm-consent disabled><button class="btn btn-sm btn-outline-danger" type="submit">End session</button><span class="mutation-status" role="status" aria-live="polite" hidden>Submitting…</span></form>
+    </article>
+    
+    <article class="session-card">
+      <h3 class="h6">Ended synthetic session </h3>
+      <p class="mb-2"><strong>Last sign-in or refresh:</strong> <time datetime="2026-09-23T09:00:00Z">23 Sep 2026, 09:00 UTC</time></p>
+      <p class="mb-2"><strong>Connection peer:</strong> Unknown <span class="text-body-secondary">(may be a proxy)</span></p>
+      <details class="mb-3"><summary>Session dates</summary><p class="mb-1">Created: <time datetime="2026-09-23T08:00:00Z">23 Sep 2026, 08:00 UTC</time></p><p class="mb-0">Expires: <time datetime="2026-09-23T13:00:00Z">23 Sep 2026, 13:00 UTC</time></p></details>
+      <p class="text-body-secondary mb-0">Ended</p>
+    </article>
+    
+    <article class="session-card">
+      <h3 class="h6">Expired synthetic session </h3>
+      <p class="mb-2"><strong>Last sign-in or refresh:</strong> <time datetime="2026-09-23T07:00:00Z">23 Sep 2026, 07:00 UTC</time></p>
+      <p class="mb-2"><strong>Connection peer:</strong> Unknown <span class="text-body-secondary">(may be a proxy)</span></p>
+      <details class="mb-3"><summary>Session dates</summary><p class="mb-1">Created: <time datetime="2026-09-23T06:00:00Z">23 Sep 2026, 06:00 UTC</time></p><p class="mb-0">Expires: <time datetime="2026-09-23T11:00:00Z">23 Sep 2026, 11:00 UTC</time></p></details>
+      <p class="text-body-secondary mb-0">Expired</p>
+    </article>
+    
+  </div>
+  
+</div></section>
+
+</div></main></div>
+  <footer class="app-footer"><span>Balda Backoffice</span><span class="d-none d-sm-inline">Internal operations</span></footer>
+</div>
+<div class="modal" id="action-confirmation" tabindex="-1" aria-labelledby="action-confirmation-title" aria-describedby="action-confirmation-body" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable"><div class="modal-content">
+    <div class="modal-header"><h2 class="modal-title fs-5" id="action-confirmation-title">Confirm action</h2><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button></div>
+    <div class="modal-body text-break" id="action-confirmation-body"></div>
+    <div class="modal-footer"><button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal" data-confirm-cancel autofocus>Cancel</button><button type="button" class="btn btn-danger" data-confirm-accept>Confirm</button></div>
+  </div></div>
+</div>
+<script src="/assets/vendor/bootstrap/bootstrap.min.js"></script>
+<script src="/assets/vendor/htmx/htmx.min.js"></script>
+<script src="/assets/vendor/adminlte/adminlte.min.js"></script>
+<script src="/assets/app.86002ff16e1d4283.js"></script>
+<script src="/assets/webauthn.40e5e004cad3b5e5.js"></script>
+</body>
+</html>

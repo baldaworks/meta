@@ -64,6 +64,8 @@ Keep the meta checkout at its recorded pins. Create feature worktrees from the s
 task worktree:add PROJECT=balda WORK=chat-fix
 task worktree:list PROJECT=balda
 task worktree:run PROJECT=balda WORK=chat-fix TARGET=arch-lint
+task worktree:beads PROJECT=balda WORK=chat-fix -- ready --json
+task worktree:git PROJECT=balda WORK=chat-fix -- status --short --branch
 ```
 
 The first command fetches the project's published `main` and creates branch `feature/chat-fix` at `~/Projects/.worktrees/chat-fix/balda`. Use a distinct work name for each feature. To reproduce the exact Balda revision in the current meta commit, create a separate worktree with `BASE=pin`.
@@ -90,11 +92,20 @@ task worktree:remove PROJECT=knowl WORK=chat-fix
 
 ## Install agent skills
 
-Run `task apm:install` to install the locked skills in the project. Run `task apm:install GLOBAL=true` to install the packages declared in `apm.yml` for the current Codex user. Both commands require the APM CLI. After changing `apm.yml`, run `task apm:lock` and commit both the manifest and lockfile.
+With the APM CLI on your `PATH`, run `task apm:install` from the meta root after cloning or pulling changes. This uses the committed [lockfile](../../apm.lock.yaml) in frozen mode and installs skills under `.agents/skills/`. Edit workspace-owned skills under `skills/`; APM manages the installed copies.
 
-[Stitch skills guide](https://stitch.google.com/docs/skills/get-started/)
+For skills available across projects, run `task apm:install GLOBAL=true`. This installs the packages listed in [apm.yml](../../apm.yml) for the current Codex user. Rerun it after a manifest update if you use the global installation.
 
+### Add or update a skill
+
+1. Edit `dependencies.apm` in `apm.yml`. For a local skill, add its directory, for example `./skills/balda-backoffice`. For an upstream skill, use its repository path and commit SHA, following the existing Stitch entries. To upgrade one, change its pinned SHA.
+2. Run `task apm:lock` to resolve the manifest, update `apm.lock.yaml` and install the result locally.
+3. Run `task apm:install` to verify the frozen install. Review the manifest and lockfile together and commit them with any workspace-owned skill changes. The installed files and package cache are ignored by Git.
+
+See the [APM documentation](https://microsoft.github.io/apm/) and the [Stitch skills guide](https://stitch.google.com/docs/skills/get-started/).
 
 ## Balda Backoffice UI
 
-Install the workspace skills with `task apm:install` and use `balda-backoffice` when designing, implementing or reviewing Backoffice changes. Look up the route and state in the [Balda Backoffice Stitch project](https://stitch.withgoogle.com/projects/4792710364374043045). Make design changes there first, then compare the implementation in the Balda worktree against those screens using Playwright.
+Install the workspace skills with `task apm:install` and use `balda-backoffice` when designing, implementing or reviewing Backoffice changes. Look up the route and state in the [Balda Backoffice Stitch project](https://stitch.withgoogle.com/projects/4792710364374043045). Make design changes there first, then compare the implementation in the Balda worktree against those screens using Playwright. The import tasks are for explicitly requested baselines.
+
+Use `task backoffice:preview` to serve the pinned QA application. For a requested baseline import, `task backoffice:stitch:import` captures the checked-in synthetic QA export and uploads pending routes. To resume an interrupted upload from the existing capture, run `task backoffice:stitch:upload`.

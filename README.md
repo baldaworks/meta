@@ -30,6 +30,18 @@ task sync:pins
 task --list
 ```
 
+## Agent skills with APM
+
+This workspace uses Agent Package Manager (APM) to install Codex skills for Google Stitch and Balda Backoffice. Install the CLI from the [official APM guide](https://microsoft.github.io/apm/), then run the appropriate Task command from the checkout root.
+
+| Goal | Command |
+| --- | --- |
+| Install the locked skills in this checkout under `.agents/skills/` | `task apm:install` |
+| Install the manifest’s skills for the current Codex user across projects | `task apm:install GLOBAL=true` |
+| Refresh the lockfile and local installation after editing the manifest | `task apm:lock` |
+
+The [manifest](apm.yml) lists the local Balda Backoffice skill and pins the upstream Stitch skills. The [workspace runbook](docs/runbooks/workspace.md#install-agent-skills) explains how to add a skill, update its revision and verify a frozen installation.
+
 ## Sync commands
 
 Run these commands from the workspace root.
@@ -48,5 +60,3 @@ For project tasks, use the project name as the task prefix from the workspace ro
 The [workspace runbook](docs/runbooks/workspace.md) covers sync failures, pin updates and rollback.
 
 For feature development, create a separate project checkout with `task worktree:add PROJECT=balda WORK=chat-fix`. See the [worktree runbook](docs/runbooks/workspace.md#work-on-a-project-branch) for testing, cross-project changes and cleanup.
-
-Install the project’s Stitch skills and its Balda Backoffice design workflow with `task apm:install`. See the [workspace runbook](docs/runbooks/workspace.md#install-agent-skills).
