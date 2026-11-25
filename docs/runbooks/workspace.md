@@ -92,10 +92,17 @@ task worktree:remove PROJECT=knowl WORK=chat-fix
 
 ## Install agent skills
 
-Run `task apm:install` to install the locked skills in the project. Run `task apm:install GLOBAL=true` to install the packages declared in `apm.yml` for the current Codex user. Both commands require the APM CLI. After changing `apm.yml`, run `task apm:lock` and commit both the manifest and lockfile.
+With the APM CLI on your `PATH`, run `task apm:install` from the meta root after cloning or pulling changes. This uses the committed [lockfile](../../apm.lock.yaml) in frozen mode and installs skills under `.agents/skills/`. Edit workspace-owned skills under `skills/`; APM manages the installed copies.
 
-[Stitch skills guide](https://stitch.google.com/docs/skills/get-started/)
+For skills available across projects, run `task apm:install GLOBAL=true`. This installs the packages listed in [apm.yml](../../apm.yml) for the current Codex user. Rerun it after a manifest update if you use the global installation.
 
+### Add or update a skill
+
+1. Edit `dependencies.apm` in `apm.yml`. For a local skill, add its directory, for example `./skills/balda-backoffice`. For an upstream skill, use its repository path and commit SHA, following the existing Stitch entries. To upgrade one, change its pinned SHA.
+2. Run `task apm:lock` to resolve the manifest, update `apm.lock.yaml` and install the result locally.
+3. Run `task apm:install` to verify the frozen install. Review the manifest and lockfile together and commit them with any workspace-owned skill changes. The installed files and package cache are ignored by Git.
+
+See the [APM documentation](https://microsoft.github.io/apm/) and the [Stitch skills guide](https://stitch.google.com/docs/skills/get-started/).
 
 ## Balda Backoffice UI
 
