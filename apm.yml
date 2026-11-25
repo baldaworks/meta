@@ -1,0 +1,24 @@
+name: baldaworks-meta
+version: 1.0.0
+description: Agent skills for the Baldaworks workspace
+targets:
+  - codex
+dependencies:
+  apm:
+    - ./skills/balda-backoffice
+    - google-labs-code/stitch-skills/plugins/stitch-build/skills/react-components#9f4e828e77634e230978be45fec5501554dbe4b2
+    - google-labs-code/stitch-skills/plugins/stitch-build/skills/react-native#9f4e828e77634e230978be45fec5501554dbe4b2
+    - google-labs-code/stitch-skills/plugins/stitch-build/skills/react-vite-dashboard#9f4e828e77634e230978be45fec5501554dbe4b2
+    - google-labs-code/stitch-skills/plugins/stitch-build/skills/remotion#9f4e828e77634e230978be45fec5501554dbe4b2
+    - google-labs-code/stitch-skills/plugins/stitch-build/skills/shadcn-ui#9f4e828e77634e230978be45fec5501554dbe4b2
+    - google-labs-code/stitch-skills/plugins/stitch-design/skills/code-to-design#9f4e828e77634e230978be45fec5501554dbe4b2
+    - google-labs-code/stitch-skills/plugins/stitch-design/skills/extract-design-md#9f4e828e77634e230978be45fec5501554dbe4b2
+    - google-labs-code/stitch-skills/plugins/stitch-design/skills/extract-static-html#9f4e828e77634e230978be45fec5501554dbe4b2
+    - google-labs-code/stitch-skills/plugins/stitch-design/skills/generate-design#9f4e828e77634e230978be45fec5501554dbe4b2
+    - google-labs-code/stitch-skills/plugins/stitch-design/skills/manage-design-system#9f4e828e77634e230978be45fec5501554dbe4b2
+    - google-labs-code/stitch-skills/plugins/stitch-design/skills/upload-to-stitch#9f4e828e77634e230978be45fec5501554dbe4b2
+    - google-labs-code/stitch-skills/plugins/stitch-utilities/skills/design-md#9f4e828e77634e230978be45fec5501554dbe4b2
+    - google-labs-code/stitch-skills/plugins/stitch-utilities/skills/enhance-prompt#9f4e828e77634e230978be45fec5501554dbe4b2
+    - google-labs-code/stitch-skills/plugins/stitch-utilities/skills/site-md#9f4e828e77634e230978be45fec5501554dbe4b2
+    - google-labs-code/stitch-skills/plugins/stitch-utilities/skills/stitch-loop#9f4e828e77634e230978be45fec5501554dbe4b2
+    - google-labs-code/stitch-skills/plugins/stitch-utilities/skills/taste-design#9f4e828e77634e230978be45fec5501554dbe4b2

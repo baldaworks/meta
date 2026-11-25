@@ -64,6 +64,8 @@ Keep the meta checkout at its recorded pins. Create feature worktrees from the s
 task worktree:add PROJECT=balda WORK=chat-fix
 task worktree:list PROJECT=balda
 task worktree:run PROJECT=balda WORK=chat-fix TARGET=arch-lint
+task worktree:beads PROJECT=balda WORK=chat-fix -- ready --json
+task worktree:git PROJECT=balda WORK=chat-fix -- status --short --branch
 ```
 
 The first command fetches the project's published `main` and creates branch `feature/chat-fix` at `~/Projects/.worktrees/chat-fix/balda`. Use a distinct work name for each feature. To reproduce the exact Balda revision in the current meta commit, create a separate worktree with `BASE=pin`.
@@ -87,3 +89,14 @@ After merging the project branches, [update their shared pins](#change-a-shared-
 task worktree:remove PROJECT=balda WORK=chat-fix
 task worktree:remove PROJECT=knowl WORK=chat-fix
 ```
+
+## Install agent skills
+
+Run `task apm:install` to install the locked skills in the project. Run `task apm:install GLOBAL=true` to install the packages declared in `apm.yml` for the current Codex user. Both commands require the APM CLI. After changing `apm.yml`, run `task apm:lock` and commit both the manifest and lockfile.
+
+[Stitch skills guide](https://stitch.google.com/docs/skills/get-started/)
+
+
+## Balda Backoffice UI
+
+Install the workspace skills with `task apm:install` and use `balda-backoffice` when designing, implementing or reviewing Backoffice changes. Look up the route and state in the [Balda Backoffice Stitch project](https://stitch.withgoogle.com/projects/4792710364374043045). Make design changes there first, then compare the implementation in the Balda worktree against those screens using Playwright. The import tasks are for explicitly requested baselines.

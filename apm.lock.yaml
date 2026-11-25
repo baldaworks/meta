@@ -1,0 +1,1266 @@
+lockfile_version: '1'
+generated_at: '2026-11-23T21:50:46.600644+00:00'
+apm_version: 0.28.0
+dependencies:
+- repo_url: _local/balda-backoffice
+  name: balda-backoffice
+  version: 0.0.0
+  package_type: claude_skill
+  deployed_files:
+  - .agents/skills/balda-backoffice
+  - .agents/skills/balda-backoffice/SKILL.md
+  deployed_file_hashes:
+    .agents/skills/balda-backoffice/SKILL.md: sha256:59a0fbcc8a83e983a8b3be7d7b13a68a5919cf282dbde553daf5e7022ffde181
+  source: local
+  local_path: ./skills/balda-backoffice
+- repo_url: google-labs-code/stitch-skills
+  name: stitch::react-components
+  host: github.com
+  resolved_commit: 9f4e828e77634e230978be45fec5501554dbe4b2
+  resolved_ref: 9f4e828e77634e230978be45fec5501554dbe4b2
+  version: unknown
+  virtual_path: plugins/stitch-build/skills/react-components
+  is_virtual: true
+  package_type: claude_skill
+  deployed_files:
+  - .agents/skills/react-components
+  - .agents/skills/react-components/README.md
+  - .agents/skills/react-components/SKILL.md
+  - .agents/skills/react-components/examples/gold-standard-card.tsx
+  - .agents/skills/react-components/package-lock.json
+  - .agents/skills/react-components/package.json
+  - .agents/skills/react-components/resources/architecture-checklist.md
+  - .agents/skills/react-components/resources/component-template.tsx
+  - .agents/skills/react-components/resources/stitch-api-reference.md
+  - .agents/skills/react-components/resources/style-guide.json
+  - .agents/skills/react-components/scripts/fetch-stitch.sh
+  - .agents/skills/react-components/scripts/validate.js
+  - .agents/skills/react-components/test/classname-expressions.test.js
+  deployed_file_hashes:
+    .agents/skills/react-components/README.md: sha256:f000ddbcecffe54f5615b61ccc796a7b01305e95283f8c03f0d025c576b8bab9
+    .agents/skills/react-components/SKILL.md: sha256:a978bf8fb135c69f944432dfa4166d6a88903c524ed4be51899a226f7daa223e
+    .agents/skills/react-components/examples/gold-standard-card.tsx: sha256:c7b168b1ad6e81dbdb06a5a1cc9e4598f14c97abfbb0d15cfe36b3f4152ac4b2
+    .agents/skills/react-components/package-lock.json: sha256:db75fd36cd675a30d144138d4711b74429bffca81cb4cd75b866d6cdafd6e4c9
+    .agents/skills/react-components/package.json: sha256:2f7c64f5691b1f6ee9cc18f74203d8c13a15f9468814b6f44003cc7a91fc3af0
+    .agents/skills/react-components/resources/architecture-checklist.md: sha256:55c3407f307d557d3bd35eb3d653a18c6b2977f38efc71f6c33192ce37159c32
+    .agents/skills/react-components/resources/component-template.tsx: sha256:9d6edbca16724ebe83084ea8bb4ef0c03cace3c1773ee1b693412ac4efc30579
+    .agents/skills/react-components/resources/stitch-api-reference.md: sha256:f7cd8515705dcff420e40ee69609990b12c5e2c2c1489cea10244f177af31624
+    .agents/skills/react-components/resources/style-guide.json: sha256:9ac47e30d145bba43af7959e70cf1d8b96ba8b0e07a860ef98b1e05d50ced712
+    .agents/skills/react-components/scripts/fetch-stitch.sh: sha256:2b5939b68289d1eca1a616e7c4a4cbe6de09010941bb7756348d75509e5ef0ff
+    .agents/skills/react-components/scripts/validate.js: sha256:189e92116ba650f612db2f08d884857c8d90973d33a52be32418d6abf5b762b4
+    .agents/skills/react-components/test/classname-expressions.test.js: sha256:b9b1e66f34571fdcaad0bf6f476d30b599c67e396b8c27a60425beb27024d0a7
+  content_hash: sha256:6d652df4c0ed207014d7a7750ac9ea8a93aecc871659c88116a33245de0aaa28
+- repo_url: google-labs-code/stitch-skills
+  name: stitch::react-native
+  host: github.com
+  resolved_commit: 9f4e828e77634e230978be45fec5501554dbe4b2
+  resolved_ref: 9f4e828e77634e230978be45fec5501554dbe4b2
+  version: unknown
+  virtual_path: plugins/stitch-build/skills/react-native
+  is_virtual: true
+  package_type: claude_skill
+  deployed_files:
+  - .agents/skills/react-native
+  - .agents/skills/react-native/README.md
+  - .agents/skills/react-native/SKILL.md
+  - .agents/skills/react-native/examples/gold-standard-card.tsx
+  - .agents/skills/react-native/package-lock.json
+  - .agents/skills/react-native/package.json
+  - .agents/skills/react-native/resources/architecture-checklist.md
+  - .agents/skills/react-native/resources/component-template.tsx
+  - .agents/skills/react-native/scripts/fetch-stitch.sh
+  - .agents/skills/react-native/scripts/validate.js
+  - .agents/skills/react-native/test/intrinsic-elements.test.js
+  deployed_file_hashes:
+    .agents/skills/react-native/README.md: sha256:222dd15af84e8201a031f01a35fe8c17cc0f978d718b3d55e4fbdf8ba81f9d2e
+    .agents/skills/react-native/SKILL.md: sha256:fb83197d834142b89459d883c5029716387e73fb6441d32019f4f8ad3b8b3784
+    .agents/skills/react-native/examples/gold-standard-card.tsx: sha256:8db2586244125d2d7f34928c9730f83c8792f79f8b1d06f44832cd120e0f9c63
+    .agents/skills/react-native/package-lock.json: sha256:726f3d360d20d2b6fc328b9f42216abe0375b6bc17f4d1e27ac163468fa0c319
+    .agents/skills/react-native/package.json: sha256:50b1ae773e098299a2c1cb748f8c97069823fb5b291b57e4f36c88fa57f317be
+    .agents/skills/react-native/resources/architecture-checklist.md: sha256:0ee064b98ef7149ffa243e7be22a6622f709b709ad3e06af883d661847152b21
+    .agents/skills/react-native/resources/component-template.tsx: sha256:a66adef6966862da6812b04c346c4bc7814c73a5e5565319b2a0b8d32d4bfc3f
+    .agents/skills/react-native/scripts/fetch-stitch.sh: sha256:341f4c1b9d41e03af018f870297bdfb193f7f707a4f39096bc07abfc35288544
+    .agents/skills/react-native/scripts/validate.js: sha256:52d644fb0f42f5c10481dc112d6ce36ca80698ebb8c0a942bfeb41720e542139
+    .agents/skills/react-native/test/intrinsic-elements.test.js: sha256:abd172b17daae6c2137b6bb1480930c3d7c4d1ee89560fda9975cee1d8b5b7b2
+  content_hash: sha256:c5c049a5d0020d95ea70f546ec1044eeb636deb3d31fc7a0f28ecdb60a6cfd12
+- repo_url: google-labs-code/stitch-skills
+  name: react-vite-dashboard
+  host: github.com
+  resolved_commit: 9f4e828e77634e230978be45fec5501554dbe4b2
+  resolved_ref: 9f4e828e77634e230978be45fec5501554dbe4b2
+  version: unknown
+  virtual_path: plugins/stitch-build/skills/react-vite-dashboard
+  is_virtual: true
+  package_type: claude_skill
+  deployed_files:
+  - .agents/skills/react-vite-dashboard
+  - .agents/skills/react-vite-dashboard/README.md
+  - .agents/skills/react-vite-dashboard/SKILL.md
+  deployed_file_hashes:
+    .agents/skills/react-vite-dashboard/README.md: sha256:78ab5bdaf26ff573e2b6869c94f692f3cf13f4e5899d630b166bcaf73950f99b
+    .agents/skills/react-vite-dashboard/SKILL.md: sha256:87b624265ad4509ce8a3d31e7394749bce088a44f92498bfb65f096afb98701b
+  content_hash: sha256:0e876b7af074b77a237df2fd539c66f3ebe5fac7a8b64189c58ef0aa3c5f6518
+- repo_url: google-labs-code/stitch-skills
+  name: remotion
+  host: github.com
+  resolved_commit: 9f4e828e77634e230978be45fec5501554dbe4b2
+  resolved_ref: 9f4e828e77634e230978be45fec5501554dbe4b2
+  version: unknown
+  virtual_path: plugins/stitch-build/skills/remotion
+  is_virtual: true
+  package_type: claude_skill
+  deployed_files:
+  - .agents/skills/remotion
+  - .agents/skills/remotion/README.md
+  - .agents/skills/remotion/SKILL.md
+  - .agents/skills/remotion/examples/WalkthroughComposition.tsx
+  - .agents/skills/remotion/examples/screens.json
+  - .agents/skills/remotion/resources/composition-checklist.md
+  - .agents/skills/remotion/resources/screen-slide-template.tsx
+  - .agents/skills/remotion/scripts/download-stitch-asset.sh
+  deployed_file_hashes:
+    .agents/skills/remotion/README.md: sha256:f1dff1065dbb3450939dd4e2daea77013723f4e6e0e11cdbff69c195e4359816
+    .agents/skills/remotion/SKILL.md: sha256:7147fc5a627081fceb7b6ab6191426643747e738bb857587de1d3c1b6eecd755
+    .agents/skills/remotion/examples/WalkthroughComposition.tsx: sha256:e541d0910aa0ba259b025294c5438872f82a24d7bb78ea8cded99a164cb119a9
+    .agents/skills/remotion/examples/screens.json: sha256:ab72cc535078e9d5ef1aac96b00ed4c18d2773737e454c1d345c55c6179d64e5
+    .agents/skills/remotion/resources/composition-checklist.md: sha256:91fc3b516e8a0ce05ea18f1c87365bc6588ea7efdb01a42c64b493d242d03846
+    .agents/skills/remotion/resources/screen-slide-template.tsx: sha256:ca2aee6787883aa45fdf7eeb5d97741b76df9f016bbe64d2f8555a894181c458
+    .agents/skills/remotion/scripts/download-stitch-asset.sh: sha256:8e15f8c30f24fbcb075efbc1b17260911de033d34160d91a7481afe0d8808f29
+  content_hash: sha256:7a7b54ccecceb1d89db7cff1a0917eaae5555bec38a68e34e0c87554e3c302fc
+- repo_url: google-labs-code/stitch-skills
+  name: shadcn-ui
+  host: github.com
+  resolved_commit: 9f4e828e77634e230978be45fec5501554dbe4b2
+  resolved_ref: 9f4e828e77634e230978be45fec5501554dbe4b2
+  version: unknown
+  virtual_path: plugins/stitch-build/skills/shadcn-ui
+  is_virtual: true
+  package_type: claude_skill
+  deployed_files:
+  - .agents/skills/shadcn-ui
+  - .agents/skills/shadcn-ui/README.md
+  - .agents/skills/shadcn-ui/SKILL.md
+  - .agents/skills/shadcn-ui/examples/auth-layout.tsx
+  - .agents/skills/shadcn-ui/examples/data-table.tsx
+  - .agents/skills/shadcn-ui/examples/form-pattern.tsx
+  - .agents/skills/shadcn-ui/resources/component-catalog.md
+  - .agents/skills/shadcn-ui/resources/customization-guide.md
+  - .agents/skills/shadcn-ui/resources/migration-guide.md
+  - .agents/skills/shadcn-ui/resources/setup-guide.md
+  - .agents/skills/shadcn-ui/scripts/verify-setup.sh
+  - .agents/skills/shadcn-ui/tests/tailwind-v4.test.mjs
+  deployed_file_hashes:
+    .agents/skills/shadcn-ui/README.md: sha256:62cf99495c24670b4868c2f027172793a727107fe9b468914903c9ce2dc23de7
+    .agents/skills/shadcn-ui/SKILL.md: sha256:2ddfe599ac2ba631ca019f7b6e37ee5df9cd34f83fc016f6ea9d4ba5bbfa0304
+    .agents/skills/shadcn-ui/examples/auth-layout.tsx: sha256:31781d165e2e5098c68eabc089bccb653400fd106712e212f4e94e343c687f46
+    .agents/skills/shadcn-ui/examples/data-table.tsx: sha256:c86cb4872c1d4261a7b21590a273247d54c2f548ceb7b5c269a9e65785c4069a
+    .agents/skills/shadcn-ui/examples/form-pattern.tsx: sha256:8b4c2271d18368069cdfb94e1234a1654dacb530a328c695878f5328516ff03f
+    .agents/skills/shadcn-ui/resources/component-catalog.md: sha256:0215b4d9b04dca45040f68e24ad24ab7862aa1bfe7c0608fa69c012ba65e9650
+    .agents/skills/shadcn-ui/resources/customization-guide.md: sha256:c626feb69599bc0ec16ec67b06a0fae8a55c953138e6dd815e7e4986802fc650
+    .agents/skills/shadcn-ui/resources/migration-guide.md: sha256:81dabd227a1d180fdf2b8ac373a4baaecf421222a8da5885cd1c1703f67ad7a4
+    .agents/skills/shadcn-ui/resources/setup-guide.md: sha256:02ab4cc9e9c2f11e004ab0c79486fa46e7e05127d97ab2c8e48c6c587648a364
+    .agents/skills/shadcn-ui/scripts/verify-setup.sh: sha256:fab5c36d2602c37ad8b2456051d95b2ca2e893ca9bb416139b7aac37ad006960
+    .agents/skills/shadcn-ui/tests/tailwind-v4.test.mjs: sha256:b05f53df21a0d84b086753c79e6bb70311a1c7af05553cec79b63c03f98145ef
+  content_hash: sha256:0ab6a4224f4542b2b6c5e2f5bee9369fde22cdb3a98cd49b7aefe798b60880eb
+- repo_url: google-labs-code/stitch-skills
+  name: stitch::code-to-design
+  host: github.com
+  resolved_commit: 9f4e828e77634e230978be45fec5501554dbe4b2
+  resolved_ref: 9f4e828e77634e230978be45fec5501554dbe4b2
+  version: unknown
+  virtual_path: plugins/stitch-design/skills/code-to-design
+  is_virtual: true
+  package_type: claude_skill
+  deployed_files:
+  - .agents/skills/code-to-design
+  - .agents/skills/code-to-design/SKILL.md
+  deployed_file_hashes:
+    .agents/skills/code-to-design/SKILL.md: sha256:1daafb1d89d6e18574edc33818b992b7af59aaeb2960134dfc818ea0f53b2455
+  content_hash: sha256:712f46377fc87da5836bf230acd607923ad598791c609766b58dd9b8db00eef7
+- repo_url: google-labs-code/stitch-skills
+  name: stitch::extract-design-md
+  host: github.com
+  resolved_commit: 9f4e828e77634e230978be45fec5501554dbe4b2
+  resolved_ref: 9f4e828e77634e230978be45fec5501554dbe4b2
+  version: unknown
+  virtual_path: plugins/stitch-design/skills/extract-design-md
+  is_virtual: true
+  package_type: claude_skill
+  deployed_files:
+  - .agents/skills/extract-design-md
+  - .agents/skills/extract-design-md/SKILL.md
+  - .agents/skills/extract-design-md/examples/DESIGN.md
+  - .agents/skills/extract-design-md/references/angular.md
+  - .agents/skills/extract-design-md/references/plain-css.md
+  - .agents/skills/extract-design-md/references/react-tailwind.md
+  - .agents/skills/extract-design-md/references/svelte.md
+  - .agents/skills/extract-design-md/references/vue.md
+  deployed_file_hashes:
+    .agents/skills/extract-design-md/SKILL.md: sha256:f9c32b30acd9fea3dba7306bf38e3a859f49c1f27bcf44f9cf16d3a60a730276
+    .agents/skills/extract-design-md/examples/DESIGN.md: sha256:9a14478effd073d9fefc1f0e1084aab299078603d248406f1381462cd5a01c26
+    .agents/skills/extract-design-md/references/angular.md: sha256:d43ea54ae1fb25d72f4d2ae28df73bf3c16b92d9da35a6638f5aa572ceeff8b3
+    .agents/skills/extract-design-md/references/plain-css.md: sha256:a4e7a8efa8d8d7b33a214a4b146263bb029ba4ead478305436e7bb7ebeace80a
+    .agents/skills/extract-design-md/references/react-tailwind.md: sha256:9b48abffd0240e7721edaa1526674699fbaaab5838efb5fac0276b7e5efc8e15
+    .agents/skills/extract-design-md/references/svelte.md: sha256:f17530d1f2274ef5a8764355c979c992fe5c64a88a03270b69f43099fc117b9b
+    .agents/skills/extract-design-md/references/vue.md: sha256:df8f4d1e166e4cca4d01a60f28a1ecf35ce45787669a79008ea0cad1ec709f9f
+  content_hash: sha256:cc09dd4293c2a8d9773fda41cc711f87552bcaf23b60ece1ac59708cee78d125
+- repo_url: google-labs-code/stitch-skills
+  name: stitch::extract-static-html
+  host: github.com
+  resolved_commit: 9f4e828e77634e230978be45fec5501554dbe4b2
+  resolved_ref: 9f4e828e77634e230978be45fec5501554dbe4b2
+  version: unknown
+  virtual_path: plugins/stitch-design/skills/extract-static-html
+  is_virtual: true
+  package_type: claude_skill
+  deployed_files:
+  - .agents/skills/extract-static-html
+  - .agents/skills/extract-static-html/SKILL.md
+  - .agents/skills/extract-static-html/scripts/extract_inline_html.ts
+  - .agents/skills/extract-static-html/scripts/html_serialize.ts
+  - .agents/skills/extract-static-html/scripts/post_process.ts
+  - .agents/skills/extract-static-html/scripts/snapshot.ts
+  - .agents/skills/extract-static-html/tests/html-serialize.test.mjs
+  deployed_file_hashes:
+    .agents/skills/extract-static-html/SKILL.md: sha256:87ebabb29c37f903541bb6c32ee5f2c84e322d140d6b83bb3a0872943ebc1356
+    .agents/skills/extract-static-html/scripts/extract_inline_html.ts: sha256:18d78dfb0a6de8d9e1f3ea11f96c967f3a33ef71504db843afa0183ab8bc6f00
+    .agents/skills/extract-static-html/scripts/html_serialize.ts: sha256:9a214760f94b0dbdfee62307e51ee539efd0f46d4979942743857a68d57ade9d
+    .agents/skills/extract-static-html/scripts/post_process.ts: sha256:e1587e4658fde350d72e57a97d316bc5fe373f718a80dc5afa329752acbafe6e
+    .agents/skills/extract-static-html/scripts/snapshot.ts: sha256:777e783cc1805a9b3511efb3268ed2e8eb8d000a22f843e00fa7bd3d8323bc40
+    .agents/skills/extract-static-html/tests/html-serialize.test.mjs: sha256:0f6f36b2d0f5af3e9d2daacce561095d6cde23224b9599c68f91dd8d0fc54085
+  content_hash: sha256:4169750e907386328fd61858de290f10d63d806b3a65cdb90942adde4dca79a3
+- repo_url: google-labs-code/stitch-skills
+  name: stitch::generate-design
+  host: github.com
+  resolved_commit: 9f4e828e77634e230978be45fec5501554dbe4b2
+  resolved_ref: 9f4e828e77634e230978be45fec5501554dbe4b2
+  version: unknown
+  virtual_path: plugins/stitch-design/skills/generate-design
+  is_virtual: true
+  package_type: claude_skill
+  deployed_files:
+  - .agents/skills/generate-design
+  - .agents/skills/generate-design/SKILL.md
+  - .agents/skills/generate-design/examples/enhanced-prompt.md
+  - .agents/skills/generate-design/references/design-mappings.md
+  - .agents/skills/generate-design/references/prompt-keywords.md
+  deployed_file_hashes:
+    .agents/skills/generate-design/SKILL.md: sha256:d03d2de3a0cefbde2ca7b8cdc2c96e8164a8b9400fe3a9b97a3aa6ce37ee638d
+    .agents/skills/generate-design/examples/enhanced-prompt.md: sha256:8ca345151e70d6067bd460fc63fcbd455d60cc87f066e7c70160e3f277f857f5
+    .agents/skills/generate-design/references/design-mappings.md: sha256:add62a31b8507d7ce22f345f0104725962f0c62a484d4ff975821cefb28ad10b
+    .agents/skills/generate-design/references/prompt-keywords.md: sha256:8ca5c0cf251a6801d0bdccf5cf59271be172f7c2fd83b298c54d9b3ceb498fdf
+  content_hash: sha256:2c93c40f5e103c6399707275e1fb5d4dc2a9b682d310b7a33d765ff47d12e539
+- repo_url: google-labs-code/stitch-skills
+  name: stitch::manage-design-system
+  host: github.com
+  resolved_commit: 9f4e828e77634e230978be45fec5501554dbe4b2
+  resolved_ref: 9f4e828e77634e230978be45fec5501554dbe4b2
+  version: unknown
+  virtual_path: plugins/stitch-design/skills/manage-design-system
+  is_virtual: true
+  package_type: claude_skill
+  deployed_files:
+  - .agents/skills/manage-design-system
+  - .agents/skills/manage-design-system/SKILL.md
+  - .agents/skills/manage-design-system/examples/metadata.json
+  - .agents/skills/manage-design-system/reference/tool-schema.md
+  deployed_file_hashes:
+    .agents/skills/manage-design-system/SKILL.md: sha256:5ce0b8adb5261e8a926fc0942d679cda0421ac29e8159a6ee38e5d940bc9658e
+    .agents/skills/manage-design-system/examples/metadata.json: sha256:4d93c7d897caa26a3b0f26e7b0312017555b2d8beb997c4edd1a3f6e478e8c90
+    .agents/skills/manage-design-system/reference/tool-schema.md: sha256:b0d4f0d80127c3f576ddb3412543e7f99dcd08c3e88c9712987c3c7359c613f0
+  content_hash: sha256:6eba3a5ccb875c16aa78a7cbe8d7098080cae5cb6bce9912887bb106ae8ae302
+- repo_url: google-labs-code/stitch-skills
+  name: stitch::upload-to-stitch
+  host: github.com
+  resolved_commit: 9f4e828e77634e230978be45fec5501554dbe4b2
+  resolved_ref: 9f4e828e77634e230978be45fec5501554dbe4b2
+  version: unknown
+  virtual_path: plugins/stitch-design/skills/upload-to-stitch
+  is_virtual: true
+  package_type: claude_skill
+  deployed_files:
+  - .agents/skills/upload-to-stitch
+  - .agents/skills/upload-to-stitch/SKILL.md
+  - .agents/skills/upload-to-stitch/scripts/upload_to_stitch.py
+  deployed_file_hashes:
+    .agents/skills/upload-to-stitch/SKILL.md: sha256:e8ddf11677a916e6a4ccf608fafcf0f2a03d548677763c0ca7de6671799c0f99
+    .agents/skills/upload-to-stitch/scripts/upload_to_stitch.py: sha256:8a1313edc967b0edf37074184f43252ccccbf9353f02a7f51f9e8950f96a086a
+  content_hash: sha256:63a88f67fcea9bb9efa865088103b159b568b622f7e1007b2f04b3ce83cfe136
+- repo_url: google-labs-code/stitch-skills
+  name: design-md
+  host: github.com
+  resolved_commit: 9f4e828e77634e230978be45fec5501554dbe4b2
+  resolved_ref: 9f4e828e77634e230978be45fec5501554dbe4b2
+  version: unknown
+  virtual_path: plugins/stitch-utilities/skills/design-md
+  is_virtual: true
+  package_type: claude_skill
+  deployed_files:
+  - .agents/skills/design-md
+  - .agents/skills/design-md/README.md
+  - .agents/skills/design-md/SKILL.md
+  - .agents/skills/design-md/examples/DESIGN.md
+  deployed_file_hashes:
+    .agents/skills/design-md/README.md: sha256:d8f3d639cf202f82e4f916600be16d3bf22d6ffc55c228d15cb93662612dc4e9
+    .agents/skills/design-md/SKILL.md: sha256:eb15f44646528f3a087ce023329ae699c1b6e803662af68338e1eb1c0406b59b
+    .agents/skills/design-md/examples/DESIGN.md: sha256:e856ef5f910f564f3b25a20720e9c74a0691e407e5d0bd8e0abf97b2b7225a24
+  content_hash: sha256:46c780280f56053d693ed866b1a07db81319c395a48aadcd03337cbe93b23feb
+- repo_url: google-labs-code/stitch-skills
+  name: enhance-prompt
+  host: github.com
+  resolved_commit: 9f4e828e77634e230978be45fec5501554dbe4b2
+  resolved_ref: 9f4e828e77634e230978be45fec5501554dbe4b2
+  version: unknown
+  virtual_path: plugins/stitch-utilities/skills/enhance-prompt
+  is_virtual: true
+  package_type: claude_skill
+  deployed_files:
+  - .agents/skills/enhance-prompt
+  - .agents/skills/enhance-prompt/README.md
+  - .agents/skills/enhance-prompt/SKILL.md
+  - .agents/skills/enhance-prompt/references/KEYWORDS.md
+  deployed_file_hashes:
+    .agents/skills/enhance-prompt/README.md: sha256:91a27571c98c9d5a36f97e2f737ab781a76630534dcb5e33b2d970a3e6b5e6b6
+    .agents/skills/enhance-prompt/SKILL.md: sha256:ccb200c798072438b642b1fa6a5c515563159e2fab3d56e813d76d8afa9a7ce6
+    .agents/skills/enhance-prompt/references/KEYWORDS.md: sha256:b837324b0a51bed4521f2b55c860a4dd729a45e597fe569bc576dba95dd3bbb8
+  content_hash: sha256:4393c11fc9ea9c9c797fd8a7eb943b6ee84a56fb52d3ef855c8d81b236541444
+- repo_url: google-labs-code/stitch-skills
+  name: site-md
+  host: github.com
+  resolved_commit: 9f4e828e77634e230978be45fec5501554dbe4b2
+  resolved_ref: 9f4e828e77634e230978be45fec5501554dbe4b2
+  version: unknown
+  virtual_path: plugins/stitch-utilities/skills/site-md
+  is_virtual: true
+  package_type: claude_skill
+  deployed_files:
+  - .agents/skills/site-md
+  - .agents/skills/site-md/SKILL.md
+  deployed_file_hashes:
+    .agents/skills/site-md/SKILL.md: sha256:679a0020ea2fbfdc4c4db84c32936eaea203263ebccb4d217eff1cf418d3de60
+  content_hash: sha256:fb726143979f94cf3fac62bd95307eba9eace92319168311c8e277f1aedbfb09
+- repo_url: google-labs-code/stitch-skills
+  name: stitch-loop
+  host: github.com
+  resolved_commit: 9f4e828e77634e230978be45fec5501554dbe4b2
+  resolved_ref: 9f4e828e77634e230978be45fec5501554dbe4b2
+  version: unknown
+  virtual_path: plugins/stitch-utilities/skills/stitch-loop
+  is_virtual: true
+  package_type: claude_skill
+  deployed_files:
+  - .agents/skills/stitch-loop
+  - .agents/skills/stitch-loop/README.md
+  - .agents/skills/stitch-loop/SKILL.md
+  - .agents/skills/stitch-loop/examples/SITE.md
+  - .agents/skills/stitch-loop/examples/next-prompt.md
+  - .agents/skills/stitch-loop/resources/baton-schema.md
+  - .agents/skills/stitch-loop/resources/site-template.md
+  deployed_file_hashes:
+    .agents/skills/stitch-loop/README.md: sha256:8c12fc4f42a7f867aeb64e28cf7f15b8e803fafb1c52751047eb0c1668a215ab
+    .agents/skills/stitch-loop/SKILL.md: sha256:05f39ecf81b0664872e6f3d6be01c53cf8c1f8b9ef14c741fe01d1ac424ce634
+    .agents/skills/stitch-loop/examples/SITE.md: sha256:93961111838eecae82ddc4a3db7e86381a7c430b8ea4ac495b73d03f7804808e
+    .agents/skills/stitch-loop/examples/next-prompt.md: sha256:4a3575178d2236a7f3bc6af3bdabf65567dc9e0636f72674593e6d4ed0982cc5
+    .agents/skills/stitch-loop/resources/baton-schema.md: sha256:14f8aa79f9236e960418b234e35e2e96458db04e348801174b50b52003564f1e
+    .agents/skills/stitch-loop/resources/site-template.md: sha256:0891648f83e9d098960baed9ed16f1ca33568e0765fce571bf6c771c278ce678
+  content_hash: sha256:065ced8084de93a388390382d26356913744977fb231257b746cd5a45846065c
+- repo_url: google-labs-code/stitch-skills
+  name: taste-design
+  host: github.com
+  resolved_commit: 9f4e828e77634e230978be45fec5501554dbe4b2
+  resolved_ref: 9f4e828e77634e230978be45fec5501554dbe4b2
+  version: unknown
+  virtual_path: plugins/stitch-utilities/skills/taste-design
+  is_virtual: true
+  package_type: claude_skill
+  deployed_files:
+  - .agents/skills/taste-design
+  - .agents/skills/taste-design/SKILL.md
+  - .agents/skills/taste-design/resources/DESIGN.md
+  deployed_file_hashes:
+    .agents/skills/taste-design/SKILL.md: sha256:0defa03017d146592053a86dc5c004fb4f4ea0df97771aaa813ebaab3bf6f339
+    .agents/skills/taste-design/resources/DESIGN.md: sha256:d6bd72a44725e0d8fe40642559863c4c2eae5e4a6bd3b5f204d1cc0c7c5482fa
+  content_hash: sha256:5402659dbadfbe6e071bf2b4429fe2e815ebe1f9d885f312ae78c11297ed0ab5
+deployments:
+- kind: project-relative
+  target: codex
+  value: .agents/skills/balda-backoffice
+  runtime: null
+  scope: project
+  owners:
+  - ./skills/balda-backoffice
+  active_owner: ./skills/balda-backoffice
+  content_hash: null
+- kind: project-relative
+  target: codex
+  value: .agents/skills/balda-backoffice/SKILL.md
+  runtime: null
+  scope: project
+  owners:
+  - ./skills/balda-backoffice
+  active_owner: ./skills/balda-backoffice
+  content_hash: sha256:59a0fbcc8a83e983a8b3be7d7b13a68a5919cf282dbde553daf5e7022ffde181
+- kind: project-relative
+  target: codex
+  value: .agents/skills/code-to-design
+  runtime: null
+  scope: project
+  owners:
+  - google-labs-code/stitch-skills/plugins/stitch-design/skills/code-to-design
+  active_owner: google-labs-code/stitch-skills/plugins/stitch-design/skills/code-to-design
+  content_hash: null
+- kind: project-relative
+  target: codex
+  value: .agents/skills/code-to-design/SKILL.md
+  runtime: null
+  scope: project
+  owners:
+  - google-labs-code/stitch-skills/plugins/stitch-design/skills/code-to-design
+  active_owner: google-labs-code/stitch-skills/plugins/stitch-design/skills/code-to-design
+  content_hash: sha256:1daafb1d89d6e18574edc33818b992b7af59aaeb2960134dfc818ea0f53b2455
+- kind: project-relative
+  target: codex
+  value: .agents/skills/design-md
+  runtime: null
+  scope: project
+  owners:
+  - google-labs-code/stitch-skills/plugins/stitch-utilities/skills/design-md
+  active_owner: google-labs-code/stitch-skills/plugins/stitch-utilities/skills/design-md
+  content_hash: null
+- kind: project-relative
+  target: codex
+  value: .agents/skills/design-md/README.md
+  runtime: null
+  scope: project
+  owners:
+  - google-labs-code/stitch-skills/plugins/stitch-utilities/skills/design-md
+  active_owner: google-labs-code/stitch-skills/plugins/stitch-utilities/skills/design-md
+  content_hash: sha256:d8f3d639cf202f82e4f916600be16d3bf22d6ffc55c228d15cb93662612dc4e9
+- kind: project-relative
+  target: codex
+  value: .agents/skills/design-md/SKILL.md
+  runtime: null
+  scope: project
+  owners:
+  - google-labs-code/stitch-skills/plugins/stitch-utilities/skills/design-md
+  active_owner: google-labs-code/stitch-skills/plugins/stitch-utilities/skills/design-md
+  content_hash: sha256:eb15f44646528f3a087ce023329ae699c1b6e803662af68338e1eb1c0406b59b
+- kind: project-relative
+  target: codex
+  value: .agents/skills/design-md/examples/DESIGN.md
+  runtime: null
+  scope: project
+  owners:
+  - google-labs-code/stitch-skills/plugins/stitch-utilities/skills/design-md
+  active_owner: google-labs-code/stitch-skills/plugins/stitch-utilities/skills/design-md
+  content_hash: sha256:e856ef5f910f564f3b25a20720e9c74a0691e407e5d0bd8e0abf97b2b7225a24
+- kind: project-relative
+  target: codex
+  value: .agents/skills/enhance-prompt
+  runtime: null
+  scope: project
+  owners:
+  - google-labs-code/stitch-skills/plugins/stitch-utilities/skills/enhance-prompt
+  active_owner: google-labs-code/stitch-skills/plugins/stitch-utilities/skills/enhance-prompt
+  content_hash: null
+- kind: project-relative
+  target: codex
+  value: .agents/skills/enhance-prompt/README.md
+  runtime: null
+  scope: project
+  owners:
+  - google-labs-code/stitch-skills/plugins/stitch-utilities/skills/enhance-prompt
+  active_owner: google-labs-code/stitch-skills/plugins/stitch-utilities/skills/enhance-prompt
+  content_hash: sha256:91a27571c98c9d5a36f97e2f737ab781a76630534dcb5e33b2d970a3e6b5e6b6
+- kind: project-relative
+  target: codex
+  value: .agents/skills/enhance-prompt/SKILL.md
+  runtime: null
+  scope: project
+  owners:
+  - google-labs-code/stitch-skills/plugins/stitch-utilities/skills/enhance-prompt
+  active_owner: google-labs-code/stitch-skills/plugins/stitch-utilities/skills/enhance-prompt
+  content_hash: sha256:ccb200c798072438b642b1fa6a5c515563159e2fab3d56e813d76d8afa9a7ce6
+- kind: project-relative
+  target: codex
+  value: .agents/skills/enhance-prompt/references/KEYWORDS.md
+  runtime: null
+  scope: project
+  owners:
+  - google-labs-code/stitch-skills/plugins/stitch-utilities/skills/enhance-prompt
+  active_owner: google-labs-code/stitch-skills/plugins/stitch-utilities/skills/enhance-prompt
+  content_hash: sha256:b837324b0a51bed4521f2b55c860a4dd729a45e597fe569bc576dba95dd3bbb8
+- kind: project-relative
+  target: codex
+  value: .agents/skills/extract-design-md
+  runtime: null
+  scope: project
+  owners:
+  - google-labs-code/stitch-skills/plugins/stitch-design/skills/extract-design-md
+  active_owner: google-labs-code/stitch-skills/plugins/stitch-design/skills/extract-design-md
+  content_hash: null
+- kind: project-relative
+  target: codex
+  value: .agents/skills/extract-design-md/SKILL.md
+  runtime: null
+  scope: project
+  owners:
+  - google-labs-code/stitch-skills/plugins/stitch-design/skills/extract-design-md
+  active_owner: google-labs-code/stitch-skills/plugins/stitch-design/skills/extract-design-md
+  content_hash: sha256:f9c32b30acd9fea3dba7306bf38e3a859f49c1f27bcf44f9cf16d3a60a730276
+- kind: project-relative
+  target: codex
+  value: .agents/skills/extract-design-md/examples/DESIGN.md
+  runtime: null
+  scope: project
+  owners:
+  - google-labs-code/stitch-skills/plugins/stitch-design/skills/extract-design-md
+  active_owner: google-labs-code/stitch-skills/plugins/stitch-design/skills/extract-design-md
+  content_hash: sha256:9a14478effd073d9fefc1f0e1084aab299078603d248406f1381462cd5a01c26
+- kind: project-relative
+  target: codex
+  value: .agents/skills/extract-design-md/references/angular.md
+  runtime: null
+  scope: project
+  owners:
+  - google-labs-code/stitch-skills/plugins/stitch-design/skills/extract-design-md
+  active_owner: google-labs-code/stitch-skills/plugins/stitch-design/skills/extract-design-md
+  content_hash: sha256:d43ea54ae1fb25d72f4d2ae28df73bf3c16b92d9da35a6638f5aa572ceeff8b3
+- kind: project-relative
+  target: codex
+  value: .agents/skills/extract-design-md/references/plain-css.md
+  runtime: null
+  scope: project
+  owners:
+  - google-labs-code/stitch-skills/plugins/stitch-design/skills/extract-design-md
+  active_owner: google-labs-code/stitch-skills/plugins/stitch-design/skills/extract-design-md
+  content_hash: sha256:a4e7a8efa8d8d7b33a214a4b146263bb029ba4ead478305436e7bb7ebeace80a
+- kind: project-relative
+  target: codex
+  value: .agents/skills/extract-design-md/references/react-tailwind.md
+  runtime: null
+  scope: project
+  owners:
+  - google-labs-code/stitch-skills/plugins/stitch-design/skills/extract-design-md
+  active_owner: google-labs-code/stitch-skills/plugins/stitch-design/skills/extract-design-md
+  content_hash: sha256:9b48abffd0240e7721edaa1526674699fbaaab5838efb5fac0276b7e5efc8e15
+- kind: project-relative
+  target: codex
+  value: .agents/skills/extract-design-md/references/svelte.md
+  runtime: null
+  scope: project
+  owners:
+  - google-labs-code/stitch-skills/plugins/stitch-design/skills/extract-design-md
+  active_owner: google-labs-code/stitch-skills/plugins/stitch-design/skills/extract-design-md
+  content_hash: sha256:f17530d1f2274ef5a8764355c979c992fe5c64a88a03270b69f43099fc117b9b
+- kind: project-relative
+  target: codex
+  value: .agents/skills/extract-design-md/references/vue.md
+  runtime: null
+  scope: project
+  owners:
+  - google-labs-code/stitch-skills/plugins/stitch-design/skills/extract-design-md
+  active_owner: google-labs-code/stitch-skills/plugins/stitch-design/skills/extract-design-md
+  content_hash: sha256:df8f4d1e166e4cca4d01a60f28a1ecf35ce45787669a79008ea0cad1ec709f9f
+- kind: project-relative
+  target: codex
+  value: .agents/skills/extract-static-html
+  runtime: null
+  scope: project
+  owners:
+  - google-labs-code/stitch-skills/plugins/stitch-design/skills/extract-static-html
+  active_owner: google-labs-code/stitch-skills/plugins/stitch-design/skills/extract-static-html
+  content_hash: null
+- kind: project-relative
+  target: codex
+  value: .agents/skills/extract-static-html/SKILL.md
+  runtime: null
+  scope: project
+  owners:
+  - google-labs-code/stitch-skills/plugins/stitch-design/skills/extract-static-html
+  active_owner: google-labs-code/stitch-skills/plugins/stitch-design/skills/extract-static-html
+  content_hash: sha256:87ebabb29c37f903541bb6c32ee5f2c84e322d140d6b83bb3a0872943ebc1356
+- kind: project-relative
+  target: codex
+  value: .agents/skills/extract-static-html/scripts/extract_inline_html.ts
+  runtime: null
+  scope: project
+  owners:
+  - google-labs-code/stitch-skills/plugins/stitch-design/skills/extract-static-html
+  active_owner: google-labs-code/stitch-skills/plugins/stitch-design/skills/extract-static-html
+  content_hash: sha256:18d78dfb0a6de8d9e1f3ea11f96c967f3a33ef71504db843afa0183ab8bc6f00
+- kind: project-relative
+  target: codex
+  value: .agents/skills/extract-static-html/scripts/html_serialize.ts
+  runtime: null
+  scope: project
+  owners:
+  - google-labs-code/stitch-skills/plugins/stitch-design/skills/extract-static-html
+  active_owner: google-labs-code/stitch-skills/plugins/stitch-design/skills/extract-static-html
+  content_hash: sha256:9a214760f94b0dbdfee62307e51ee539efd0f46d4979942743857a68d57ade9d
+- kind: project-relative
+  target: codex
+  value: .agents/skills/extract-static-html/scripts/post_process.ts
+  runtime: null
+  scope: project
+  owners:
+  - google-labs-code/stitch-skills/plugins/stitch-design/skills/extract-static-html
+  active_owner: google-labs-code/stitch-skills/plugins/stitch-design/skills/extract-static-html
+  content_hash: sha256:e1587e4658fde350d72e57a97d316bc5fe373f718a80dc5afa329752acbafe6e
+- kind: project-relative
+  target: codex
+  value: .agents/skills/extract-static-html/scripts/snapshot.ts
+  runtime: null
+  scope: project
+  owners:
+  - google-labs-code/stitch-skills/plugins/stitch-design/skills/extract-static-html
+  active_owner: google-labs-code/stitch-skills/plugins/stitch-design/skills/extract-static-html
+  content_hash: sha256:777e783cc1805a9b3511efb3268ed2e8eb8d000a22f843e00fa7bd3d8323bc40
+- kind: project-relative
+  target: codex
+  value: .agents/skills/extract-static-html/tests/html-serialize.test.mjs
+  runtime: null
+  scope: project
+  owners:
+  - google-labs-code/stitch-skills/plugins/stitch-design/skills/extract-static-html
+  active_owner: google-labs-code/stitch-skills/plugins/stitch-design/skills/extract-static-html
+  content_hash: sha256:0f6f36b2d0f5af3e9d2daacce561095d6cde23224b9599c68f91dd8d0fc54085
+- kind: project-relative
+  target: codex
+  value: .agents/skills/generate-design
+  runtime: null
+  scope: project
+  owners:
+  - google-labs-code/stitch-skills/plugins/stitch-design/skills/generate-design
+  active_owner: google-labs-code/stitch-skills/plugins/stitch-design/skills/generate-design
+  content_hash: null
+- kind: project-relative
+  target: codex
+  value: .agents/skills/generate-design/SKILL.md
+  runtime: null
+  scope: project
+  owners:
+  - google-labs-code/stitch-skills/plugins/stitch-design/skills/generate-design
+  active_owner: google-labs-code/stitch-skills/plugins/stitch-design/skills/generate-design
+  content_hash: sha256:d03d2de3a0cefbde2ca7b8cdc2c96e8164a8b9400fe3a9b97a3aa6ce37ee638d
+- kind: project-relative
+  target: codex
+  value: .agents/skills/generate-design/examples/enhanced-prompt.md
+  runtime: null
+  scope: project
+  owners:
+  - google-labs-code/stitch-skills/plugins/stitch-design/skills/generate-design
+  active_owner: google-labs-code/stitch-skills/plugins/stitch-design/skills/generate-design
+  content_hash: sha256:8ca345151e70d6067bd460fc63fcbd455d60cc87f066e7c70160e3f277f857f5
+- kind: project-relative
+  target: codex
+  value: .agents/skills/generate-design/references/design-mappings.md
+  runtime: null
+  scope: project
+  owners:
+  - google-labs-code/stitch-skills/plugins/stitch-design/skills/generate-design
+  active_owner: google-labs-code/stitch-skills/plugins/stitch-design/skills/generate-design
+  content_hash: sha256:add62a31b8507d7ce22f345f0104725962f0c62a484d4ff975821cefb28ad10b
+- kind: project-relative
+  target: codex
+  value: .agents/skills/generate-design/references/prompt-keywords.md
+  runtime: null
+  scope: project
+  owners:
+  - google-labs-code/stitch-skills/plugins/stitch-design/skills/generate-design
+  active_owner: google-labs-code/stitch-skills/plugins/stitch-design/skills/generate-design
+  content_hash: sha256:8ca5c0cf251a6801d0bdccf5cf59271be172f7c2fd83b298c54d9b3ceb498fdf
+- kind: project-relative
+  target: codex
+  value: .agents/skills/manage-design-system
+  runtime: null
+  scope: project
+  owners:
+  - google-labs-code/stitch-skills/plugins/stitch-design/skills/manage-design-system
+  active_owner: google-labs-code/stitch-skills/plugins/stitch-design/skills/manage-design-system
+  content_hash: null
+- kind: project-relative
+  target: codex
+  value: .agents/skills/manage-design-system/SKILL.md
+  runtime: null
+  scope: project
+  owners:
+  - google-labs-code/stitch-skills/plugins/stitch-design/skills/manage-design-system
+  active_owner: google-labs-code/stitch-skills/plugins/stitch-design/skills/manage-design-system
+  content_hash: sha256:5ce0b8adb5261e8a926fc0942d679cda0421ac29e8159a6ee38e5d940bc9658e
+- kind: project-relative
+  target: codex
+  value: .agents/skills/manage-design-system/examples/metadata.json
+  runtime: null
+  scope: project
+  owners:
+  - google-labs-code/stitch-skills/plugins/stitch-design/skills/manage-design-system
+  active_owner: google-labs-code/stitch-skills/plugins/stitch-design/skills/manage-design-system
+  content_hash: sha256:4d93c7d897caa26a3b0f26e7b0312017555b2d8beb997c4edd1a3f6e478e8c90
+- kind: project-relative
+  target: codex
+  value: .agents/skills/manage-design-system/reference/tool-schema.md
+  runtime: null
+  scope: project
+  owners:
+  - google-labs-code/stitch-skills/plugins/stitch-design/skills/manage-design-system
+  active_owner: google-labs-code/stitch-skills/plugins/stitch-design/skills/manage-design-system
+  content_hash: sha256:b0d4f0d80127c3f576ddb3412543e7f99dcd08c3e88c9712987c3c7359c613f0
+- kind: project-relative
+  target: codex
+  value: .agents/skills/react-components
+  runtime: null
+  scope: project
+  owners:
+  - google-labs-code/stitch-skills/plugins/stitch-build/skills/react-components
+  active_owner: google-labs-code/stitch-skills/plugins/stitch-build/skills/react-components
+  content_hash: null
+- kind: project-relative
+  target: codex
+  value: .agents/skills/react-components/README.md
+  runtime: null
+  scope: project
+  owners:
+  - google-labs-code/stitch-skills/plugins/stitch-build/skills/react-components
+  active_owner: google-labs-code/stitch-skills/plugins/stitch-build/skills/react-components
+  content_hash: sha256:f000ddbcecffe54f5615b61ccc796a7b01305e95283f8c03f0d025c576b8bab9
+- kind: project-relative
+  target: codex
+  value: .agents/skills/react-components/SKILL.md
+  runtime: null
+  scope: project
+  owners:
+  - google-labs-code/stitch-skills/plugins/stitch-build/skills/react-components
+  active_owner: google-labs-code/stitch-skills/plugins/stitch-build/skills/react-components
+  content_hash: sha256:a978bf8fb135c69f944432dfa4166d6a88903c524ed4be51899a226f7daa223e
+- kind: project-relative
+  target: codex
+  value: .agents/skills/react-components/examples/gold-standard-card.tsx
+  runtime: null
+  scope: project
+  owners:
+  - google-labs-code/stitch-skills/plugins/stitch-build/skills/react-components
+  active_owner: google-labs-code/stitch-skills/plugins/stitch-build/skills/react-components
+  content_hash: sha256:c7b168b1ad6e81dbdb06a5a1cc9e4598f14c97abfbb0d15cfe36b3f4152ac4b2
+- kind: project-relative
+  target: codex
+  value: .agents/skills/react-components/package-lock.json
+  runtime: null
+  scope: project
+  owners:
+  - google-labs-code/stitch-skills/plugins/stitch-build/skills/react-components
+  active_owner: google-labs-code/stitch-skills/plugins/stitch-build/skills/react-components
+  content_hash: sha256:db75fd36cd675a30d144138d4711b74429bffca81cb4cd75b866d6cdafd6e4c9
+- kind: project-relative
+  target: codex
+  value: .agents/skills/react-components/package.json
+  runtime: null
+  scope: project
+  owners:
+  - google-labs-code/stitch-skills/plugins/stitch-build/skills/react-components
+  active_owner: google-labs-code/stitch-skills/plugins/stitch-build/skills/react-components
+  content_hash: sha256:2f7c64f5691b1f6ee9cc18f74203d8c13a15f9468814b6f44003cc7a91fc3af0
+- kind: project-relative
+  target: codex
+  value: .agents/skills/react-components/resources/architecture-checklist.md
+  runtime: null
+  scope: project
+  owners:
+  - google-labs-code/stitch-skills/plugins/stitch-build/skills/react-components
+  active_owner: google-labs-code/stitch-skills/plugins/stitch-build/skills/react-components
+  content_hash: sha256:55c3407f307d557d3bd35eb3d653a18c6b2977f38efc71f6c33192ce37159c32
+- kind: project-relative
+  target: codex
+  value: .agents/skills/react-components/resources/component-template.tsx
+  runtime: null
+  scope: project
+  owners:
+  - google-labs-code/stitch-skills/plugins/stitch-build/skills/react-components
+  active_owner: google-labs-code/stitch-skills/plugins/stitch-build/skills/react-components
+  content_hash: sha256:9d6edbca16724ebe83084ea8bb4ef0c03cace3c1773ee1b693412ac4efc30579
+- kind: project-relative
+  target: codex
+  value: .agents/skills/react-components/resources/stitch-api-reference.md
+  runtime: null
+  scope: project
+  owners:
+  - google-labs-code/stitch-skills/plugins/stitch-build/skills/react-components
+  active_owner: google-labs-code/stitch-skills/plugins/stitch-build/skills/react-components
+  content_hash: sha256:f7cd8515705dcff420e40ee69609990b12c5e2c2c1489cea10244f177af31624
+- kind: project-relative
+  target: codex
+  value: .agents/skills/react-components/resources/style-guide.json
+  runtime: null
+  scope: project
+  owners:
+  - google-labs-code/stitch-skills/plugins/stitch-build/skills/react-components
+  active_owner: google-labs-code/stitch-skills/plugins/stitch-build/skills/react-components
+  content_hash: sha256:9ac47e30d145bba43af7959e70cf1d8b96ba8b0e07a860ef98b1e05d50ced712
+- kind: project-relative
+  target: codex
+  value: .agents/skills/react-components/scripts/fetch-stitch.sh
+  runtime: null
+  scope: project
+  owners:
+  - google-labs-code/stitch-skills/plugins/stitch-build/skills/react-components
+  active_owner: google-labs-code/stitch-skills/plugins/stitch-build/skills/react-components
+  content_hash: sha256:2b5939b68289d1eca1a616e7c4a4cbe6de09010941bb7756348d75509e5ef0ff
+- kind: project-relative
+  target: codex
+  value: .agents/skills/react-components/scripts/validate.js
+  runtime: null
+  scope: project
+  owners:
+  - google-labs-code/stitch-skills/plugins/stitch-build/skills/react-components
+  active_owner: google-labs-code/stitch-skills/plugins/stitch-build/skills/react-components
+  content_hash: sha256:189e92116ba650f612db2f08d884857c8d90973d33a52be32418d6abf5b762b4
+- kind: project-relative
+  target: codex
+  value: .agents/skills/react-components/test/classname-expressions.test.js
+  runtime: null
+  scope: project
+  owners:
+  - google-labs-code/stitch-skills/plugins/stitch-build/skills/react-components
+  active_owner: google-labs-code/stitch-skills/plugins/stitch-build/skills/react-components
+  content_hash: sha256:b9b1e66f34571fdcaad0bf6f476d30b599c67e396b8c27a60425beb27024d0a7
+- kind: project-relative
+  target: codex
+  value: .agents/skills/react-native
+  runtime: null
+  scope: project
+  owners:
+  - google-labs-code/stitch-skills/plugins/stitch-build/skills/react-native
+  active_owner: google-labs-code/stitch-skills/plugins/stitch-build/skills/react-native
+  content_hash: null
+- kind: project-relative
+  target: codex
+  value: .agents/skills/react-native/README.md
+  runtime: null
+  scope: project
+  owners:
+  - google-labs-code/stitch-skills/plugins/stitch-build/skills/react-native
+  active_owner: google-labs-code/stitch-skills/plugins/stitch-build/skills/react-native
+  content_hash: sha256:222dd15af84e8201a031f01a35fe8c17cc0f978d718b3d55e4fbdf8ba81f9d2e
+- kind: project-relative
+  target: codex
+  value: .agents/skills/react-native/SKILL.md
+  runtime: null
+  scope: project
+  owners:
+  - google-labs-code/stitch-skills/plugins/stitch-build/skills/react-native
+  active_owner: google-labs-code/stitch-skills/plugins/stitch-build/skills/react-native
+  content_hash: sha256:fb83197d834142b89459d883c5029716387e73fb6441d32019f4f8ad3b8b3784
+- kind: project-relative
+  target: codex
+  value: .agents/skills/react-native/examples/gold-standard-card.tsx
+  runtime: null
+  scope: project
+  owners:
+  - google-labs-code/stitch-skills/plugins/stitch-build/skills/react-native
+  active_owner: google-labs-code/stitch-skills/plugins/stitch-build/skills/react-native
+  content_hash: sha256:8db2586244125d2d7f34928c9730f83c8792f79f8b1d06f44832cd120e0f9c63
+- kind: project-relative
+  target: codex
+  value: .agents/skills/react-native/package-lock.json
+  runtime: null
+  scope: project
+  owners:
+  - google-labs-code/stitch-skills/plugins/stitch-build/skills/react-native
+  active_owner: google-labs-code/stitch-skills/plugins/stitch-build/skills/react-native
+  content_hash: sha256:726f3d360d20d2b6fc328b9f42216abe0375b6bc17f4d1e27ac163468fa0c319
+- kind: project-relative
+  target: codex
+  value: .agents/skills/react-native/package.json
+  runtime: null
+  scope: project
+  owners:
+  - google-labs-code/stitch-skills/plugins/stitch-build/skills/react-native
+  active_owner: google-labs-code/stitch-skills/plugins/stitch-build/skills/react-native
+  content_hash: sha256:50b1ae773e098299a2c1cb748f8c97069823fb5b291b57e4f36c88fa57f317be
+- kind: project-relative
+  target: codex
+  value: .agents/skills/react-native/resources/architecture-checklist.md
+  runtime: null
+  scope: project
+  owners:
+  - google-labs-code/stitch-skills/plugins/stitch-build/skills/react-native
+  active_owner: google-labs-code/stitch-skills/plugins/stitch-build/skills/react-native
+  content_hash: sha256:0ee064b98ef7149ffa243e7be22a6622f709b709ad3e06af883d661847152b21
+- kind: project-relative
+  target: codex
+  value: .agents/skills/react-native/resources/component-template.tsx
+  runtime: null
+  scope: project
+  owners:
+  - google-labs-code/stitch-skills/plugins/stitch-build/skills/react-native
+  active_owner: google-labs-code/stitch-skills/plugins/stitch-build/skills/react-native
+  content_hash: sha256:a66adef6966862da6812b04c346c4bc7814c73a5e5565319b2a0b8d32d4bfc3f
+- kind: project-relative
+  target: codex
+  value: .agents/skills/react-native/scripts/fetch-stitch.sh
+  runtime: null
+  scope: project
+  owners:
+  - google-labs-code/stitch-skills/plugins/stitch-build/skills/react-native
+  active_owner: google-labs-code/stitch-skills/plugins/stitch-build/skills/react-native
+  content_hash: sha256:341f4c1b9d41e03af018f870297bdfb193f7f707a4f39096bc07abfc35288544
+- kind: project-relative
+  target: codex
+  value: .agents/skills/react-native/scripts/validate.js
+  runtime: null
+  scope: project
+  owners:
+  - google-labs-code/stitch-skills/plugins/stitch-build/skills/react-native
+  active_owner: google-labs-code/stitch-skills/plugins/stitch-build/skills/react-native
+  content_hash: sha256:52d644fb0f42f5c10481dc112d6ce36ca80698ebb8c0a942bfeb41720e542139
+- kind: project-relative
+  target: codex
+  value: .agents/skills/react-native/test/intrinsic-elements.test.js
+  runtime: null
+  scope: project
+  owners:
+  - google-labs-code/stitch-skills/plugins/stitch-build/skills/react-native
+  active_owner: google-labs-code/stitch-skills/plugins/stitch-build/skills/react-native
+  content_hash: sha256:abd172b17daae6c2137b6bb1480930c3d7c4d1ee89560fda9975cee1d8b5b7b2
+- kind: project-relative
+  target: codex
+  value: .agents/skills/react-vite-dashboard
+  runtime: null
+  scope: project
+  owners:
+  - google-labs-code/stitch-skills/plugins/stitch-build/skills/react-vite-dashboard
+  active_owner: google-labs-code/stitch-skills/plugins/stitch-build/skills/react-vite-dashboard
+  content_hash: null
+- kind: project-relative
+  target: codex
+  value: .agents/skills/react-vite-dashboard/README.md
+  runtime: null
+  scope: project
+  owners:
+  - google-labs-code/stitch-skills/plugins/stitch-build/skills/react-vite-dashboard
+  active_owner: google-labs-code/stitch-skills/plugins/stitch-build/skills/react-vite-dashboard
+  content_hash: sha256:78ab5bdaf26ff573e2b6869c94f692f3cf13f4e5899d630b166bcaf73950f99b
+- kind: project-relative
+  target: codex
+  value: .agents/skills/react-vite-dashboard/SKILL.md
+  runtime: null
+  scope: project
+  owners:
+  - google-labs-code/stitch-skills/plugins/stitch-build/skills/react-vite-dashboard
+  active_owner: google-labs-code/stitch-skills/plugins/stitch-build/skills/react-vite-dashboard
+  content_hash: sha256:87b624265ad4509ce8a3d31e7394749bce088a44f92498bfb65f096afb98701b
+- kind: project-relative
+  target: codex
+  value: .agents/skills/remotion
+  runtime: null
+  scope: project
+  owners:
+  - google-labs-code/stitch-skills/plugins/stitch-build/skills/remotion
+  active_owner: google-labs-code/stitch-skills/plugins/stitch-build/skills/remotion
+  content_hash: null
+- kind: project-relative
+  target: codex
+  value: .agents/skills/remotion/README.md
+  runtime: null
+  scope: project
+  owners:
+  - google-labs-code/stitch-skills/plugins/stitch-build/skills/remotion
+  active_owner: google-labs-code/stitch-skills/plugins/stitch-build/skills/remotion
+  content_hash: sha256:f1dff1065dbb3450939dd4e2daea77013723f4e6e0e11cdbff69c195e4359816
+- kind: project-relative
+  target: codex
+  value: .agents/skills/remotion/SKILL.md
+  runtime: null
+  scope: project
+  owners:
+  - google-labs-code/stitch-skills/plugins/stitch-build/skills/remotion
+  active_owner: google-labs-code/stitch-skills/plugins/stitch-build/skills/remotion
+  content_hash: sha256:7147fc5a627081fceb7b6ab6191426643747e738bb857587de1d3c1b6eecd755
+- kind: project-relative
+  target: codex
+  value: .agents/skills/remotion/examples/WalkthroughComposition.tsx
+  runtime: null
+  scope: project
+  owners:
+  - google-labs-code/stitch-skills/plugins/stitch-build/skills/remotion
+  active_owner: google-labs-code/stitch-skills/plugins/stitch-build/skills/remotion
+  content_hash: sha256:e541d0910aa0ba259b025294c5438872f82a24d7bb78ea8cded99a164cb119a9
+- kind: project-relative
+  target: codex
+  value: .agents/skills/remotion/examples/screens.json
+  runtime: null
+  scope: project
+  owners:
+  - google-labs-code/stitch-skills/plugins/stitch-build/skills/remotion
+  active_owner: google-labs-code/stitch-skills/plugins/stitch-build/skills/remotion
+  content_hash: sha256:ab72cc535078e9d5ef1aac96b00ed4c18d2773737e454c1d345c55c6179d64e5
+- kind: project-relative
+  target: codex
+  value: .agents/skills/remotion/resources/composition-checklist.md
+  runtime: null
+  scope: project
+  owners:
+  - google-labs-code/stitch-skills/plugins/stitch-build/skills/remotion
+  active_owner: google-labs-code/stitch-skills/plugins/stitch-build/skills/remotion
+  content_hash: sha256:91fc3b516e8a0ce05ea18f1c87365bc6588ea7efdb01a42c64b493d242d03846
+- kind: project-relative
+  target: codex
+  value: .agents/skills/remotion/resources/screen-slide-template.tsx
+  runtime: null
+  scope: project
+  owners:
+  - google-labs-code/stitch-skills/plugins/stitch-build/skills/remotion
+  active_owner: google-labs-code/stitch-skills/plugins/stitch-build/skills/remotion
+  content_hash: sha256:ca2aee6787883aa45fdf7eeb5d97741b76df9f016bbe64d2f8555a894181c458
+- kind: project-relative
+  target: codex
+  value: .agents/skills/remotion/scripts/download-stitch-asset.sh
+  runtime: null
+  scope: project
+  owners:
+  - google-labs-code/stitch-skills/plugins/stitch-build/skills/remotion
+  active_owner: google-labs-code/stitch-skills/plugins/stitch-build/skills/remotion
+  content_hash: sha256:8e15f8c30f24fbcb075efbc1b17260911de033d34160d91a7481afe0d8808f29
+- kind: project-relative
+  target: codex
+  value: .agents/skills/shadcn-ui
+  runtime: null
+  scope: project
+  owners:
+  - google-labs-code/stitch-skills/plugins/stitch-build/skills/shadcn-ui
+  active_owner: google-labs-code/stitch-skills/plugins/stitch-build/skills/shadcn-ui
+  content_hash: null
+- kind: project-relative
+  target: codex
+  value: .agents/skills/shadcn-ui/README.md
+  runtime: null
+  scope: project
+  owners:
+  - google-labs-code/stitch-skills/plugins/stitch-build/skills/shadcn-ui
+  active_owner: google-labs-code/stitch-skills/plugins/stitch-build/skills/shadcn-ui
+  content_hash: sha256:62cf99495c24670b4868c2f027172793a727107fe9b468914903c9ce2dc23de7
+- kind: project-relative
+  target: codex
+  value: .agents/skills/shadcn-ui/SKILL.md
+  runtime: null
+  scope: project
+  owners:
+  - google-labs-code/stitch-skills/plugins/stitch-build/skills/shadcn-ui
+  active_owner: google-labs-code/stitch-skills/plugins/stitch-build/skills/shadcn-ui
+  content_hash: sha256:2ddfe599ac2ba631ca019f7b6e37ee5df9cd34f83fc016f6ea9d4ba5bbfa0304
+- kind: project-relative
+  target: codex
+  value: .agents/skills/shadcn-ui/examples/auth-layout.tsx
+  runtime: null
+  scope: project
+  owners:
+  - google-labs-code/stitch-skills/plugins/stitch-build/skills/shadcn-ui
+  active_owner: google-labs-code/stitch-skills/plugins/stitch-build/skills/shadcn-ui
+  content_hash: sha256:31781d165e2e5098c68eabc089bccb653400fd106712e212f4e94e343c687f46
+- kind: project-relative
+  target: codex
+  value: .agents/skills/shadcn-ui/examples/data-table.tsx
+  runtime: null
+  scope: project
+  owners:
+  - google-labs-code/stitch-skills/plugins/stitch-build/skills/shadcn-ui
+  active_owner: google-labs-code/stitch-skills/plugins/stitch-build/skills/shadcn-ui
+  content_hash: sha256:c86cb4872c1d4261a7b21590a273247d54c2f548ceb7b5c269a9e65785c4069a
+- kind: project-relative
+  target: codex
+  value: .agents/skills/shadcn-ui/examples/form-pattern.tsx
+  runtime: null
+  scope: project
+  owners:
+  - google-labs-code/stitch-skills/plugins/stitch-build/skills/shadcn-ui
+  active_owner: google-labs-code/stitch-skills/plugins/stitch-build/skills/shadcn-ui
+  content_hash: sha256:8b4c2271d18368069cdfb94e1234a1654dacb530a328c695878f5328516ff03f
+- kind: project-relative
+  target: codex
+  value: .agents/skills/shadcn-ui/resources/component-catalog.md
+  runtime: null
+  scope: project
+  owners:
+  - google-labs-code/stitch-skills/plugins/stitch-build/skills/shadcn-ui
+  active_owner: google-labs-code/stitch-skills/plugins/stitch-build/skills/shadcn-ui
+  content_hash: sha256:0215b4d9b04dca45040f68e24ad24ab7862aa1bfe7c0608fa69c012ba65e9650
+- kind: project-relative
+  target: codex
+  value: .agents/skills/shadcn-ui/resources/customization-guide.md
+  runtime: null
+  scope: project
+  owners:
+  - google-labs-code/stitch-skills/plugins/stitch-build/skills/shadcn-ui
+  active_owner: google-labs-code/stitch-skills/plugins/stitch-build/skills/shadcn-ui
+  content_hash: sha256:c626feb69599bc0ec16ec67b06a0fae8a55c953138e6dd815e7e4986802fc650
+- kind: project-relative
+  target: codex
+  value: .agents/skills/shadcn-ui/resources/migration-guide.md
+  runtime: null
+  scope: project
+  owners:
+  - google-labs-code/stitch-skills/plugins/stitch-build/skills/shadcn-ui
+  active_owner: google-labs-code/stitch-skills/plugins/stitch-build/skills/shadcn-ui
+  content_hash: sha256:81dabd227a1d180fdf2b8ac373a4baaecf421222a8da5885cd1c1703f67ad7a4
+- kind: project-relative
+  target: codex
+  value: .agents/skills/shadcn-ui/resources/setup-guide.md
+  runtime: null
+  scope: project
+  owners:
+  - google-labs-code/stitch-skills/plugins/stitch-build/skills/shadcn-ui
+  active_owner: google-labs-code/stitch-skills/plugins/stitch-build/skills/shadcn-ui
+  content_hash: sha256:02ab4cc9e9c2f11e004ab0c79486fa46e7e05127d97ab2c8e48c6c587648a364
+- kind: project-relative
+  target: codex
+  value: .agents/skills/shadcn-ui/scripts/verify-setup.sh
+  runtime: null
+  scope: project
+  owners:
+  - google-labs-code/stitch-skills/plugins/stitch-build/skills/shadcn-ui
+  active_owner: google-labs-code/stitch-skills/plugins/stitch-build/skills/shadcn-ui
+  content_hash: sha256:fab5c36d2602c37ad8b2456051d95b2ca2e893ca9bb416139b7aac37ad006960
+- kind: project-relative
+  target: codex
+  value: .agents/skills/shadcn-ui/tests/tailwind-v4.test.mjs
+  runtime: null
+  scope: project
+  owners:
+  - google-labs-code/stitch-skills/plugins/stitch-build/skills/shadcn-ui
+  active_owner: google-labs-code/stitch-skills/plugins/stitch-build/skills/shadcn-ui
+  content_hash: sha256:b05f53df21a0d84b086753c79e6bb70311a1c7af05553cec79b63c03f98145ef
+- kind: project-relative
+  target: codex
+  value: .agents/skills/site-md
+  runtime: null
+  scope: project
+  owners:
+  - google-labs-code/stitch-skills/plugins/stitch-utilities/skills/site-md
+  active_owner: google-labs-code/stitch-skills/plugins/stitch-utilities/skills/site-md
+  content_hash: null
+- kind: project-relative
+  target: codex
+  value: .agents/skills/site-md/SKILL.md
+  runtime: null
+  scope: project
+  owners:
+  - google-labs-code/stitch-skills/plugins/stitch-utilities/skills/site-md
+  active_owner: google-labs-code/stitch-skills/plugins/stitch-utilities/skills/site-md
+  content_hash: sha256:679a0020ea2fbfdc4c4db84c32936eaea203263ebccb4d217eff1cf418d3de60
+- kind: project-relative
+  target: codex
+  value: .agents/skills/stitch-loop
+  runtime: null
+  scope: project
+  owners:
+  - google-labs-code/stitch-skills/plugins/stitch-utilities/skills/stitch-loop
+  active_owner: google-labs-code/stitch-skills/plugins/stitch-utilities/skills/stitch-loop
+  content_hash: null
+- kind: project-relative
+  target: codex
+  value: .agents/skills/stitch-loop/README.md
+  runtime: null
+  scope: project
+  owners:
+  - google-labs-code/stitch-skills/plugins/stitch-utilities/skills/stitch-loop
+  active_owner: google-labs-code/stitch-skills/plugins/stitch-utilities/skills/stitch-loop
+  content_hash: sha256:8c12fc4f42a7f867aeb64e28cf7f15b8e803fafb1c52751047eb0c1668a215ab
+- kind: project-relative
+  target: codex
+  value: .agents/skills/stitch-loop/SKILL.md
+  runtime: null
+  scope: project
+  owners:
+  - google-labs-code/stitch-skills/plugins/stitch-utilities/skills/stitch-loop
+  active_owner: google-labs-code/stitch-skills/plugins/stitch-utilities/skills/stitch-loop
+  content_hash: sha256:05f39ecf81b0664872e6f3d6be01c53cf8c1f8b9ef14c741fe01d1ac424ce634
+- kind: project-relative
+  target: codex
+  value: .agents/skills/stitch-loop/examples/SITE.md
+  runtime: null
+  scope: project
+  owners:
+  - google-labs-code/stitch-skills/plugins/stitch-utilities/skills/stitch-loop
+  active_owner: google-labs-code/stitch-skills/plugins/stitch-utilities/skills/stitch-loop
+  content_hash: sha256:93961111838eecae82ddc4a3db7e86381a7c430b8ea4ac495b73d03f7804808e
+- kind: project-relative
+  target: codex
+  value: .agents/skills/stitch-loop/examples/next-prompt.md
+  runtime: null
+  scope: project
+  owners:
+  - google-labs-code/stitch-skills/plugins/stitch-utilities/skills/stitch-loop
+  active_owner: google-labs-code/stitch-skills/plugins/stitch-utilities/skills/stitch-loop
+  content_hash: sha256:4a3575178d2236a7f3bc6af3bdabf65567dc9e0636f72674593e6d4ed0982cc5
+- kind: project-relative
+  target: codex
+  value: .agents/skills/stitch-loop/resources/baton-schema.md
+  runtime: null
+  scope: project
+  owners:
+  - google-labs-code/stitch-skills/plugins/stitch-utilities/skills/stitch-loop
+  active_owner: google-labs-code/stitch-skills/plugins/stitch-utilities/skills/stitch-loop
+  content_hash: sha256:14f8aa79f9236e960418b234e35e2e96458db04e348801174b50b52003564f1e
+- kind: project-relative
+  target: codex
+  value: .agents/skills/stitch-loop/resources/site-template.md
+  runtime: null
+  scope: project
+  owners:
+  - google-labs-code/stitch-skills/plugins/stitch-utilities/skills/stitch-loop
+  active_owner: google-labs-code/stitch-skills/plugins/stitch-utilities/skills/stitch-loop
+  content_hash: sha256:0891648f83e9d098960baed9ed16f1ca33568e0765fce571bf6c771c278ce678
+- kind: project-relative
+  target: codex
+  value: .agents/skills/taste-design
+  runtime: null
+  scope: project
+  owners:
+  - google-labs-code/stitch-skills/plugins/stitch-utilities/skills/taste-design
+  active_owner: google-labs-code/stitch-skills/plugins/stitch-utilities/skills/taste-design
+  content_hash: null
+- kind: project-relative
+  target: codex
+  value: .agents/skills/taste-design/SKILL.md
+  runtime: null
+  scope: project
+  owners:
+  - google-labs-code/stitch-skills/plugins/stitch-utilities/skills/taste-design
+  active_owner: google-labs-code/stitch-skills/plugins/stitch-utilities/skills/taste-design
+  content_hash: sha256:0defa03017d146592053a86dc5c004fb4f4ea0df97771aaa813ebaab3bf6f339
+- kind: project-relative
+  target: codex
+  value: .agents/skills/taste-design/resources/DESIGN.md
+  runtime: null
+  scope: project
+  owners:
+  - google-labs-code/stitch-skills/plugins/stitch-utilities/skills/taste-design
+  active_owner: google-labs-code/stitch-skills/plugins/stitch-utilities/skills/taste-design
+  content_hash: sha256:d6bd72a44725e0d8fe40642559863c4c2eae5e4a6bd3b5f204d1cc0c7c5482fa
+- kind: project-relative
+  target: codex
+  value: .agents/skills/upload-to-stitch
+  runtime: null
+  scope: project
+  owners:
+  - google-labs-code/stitch-skills/plugins/stitch-design/skills/upload-to-stitch
+  active_owner: google-labs-code/stitch-skills/plugins/stitch-design/skills/upload-to-stitch
+  content_hash: null
+- kind: project-relative
+  target: codex
+  value: .agents/skills/upload-to-stitch/SKILL.md
+  runtime: null
+  scope: project
+  owners:
+  - google-labs-code/stitch-skills/plugins/stitch-design/skills/upload-to-stitch
+  active_owner: google-labs-code/stitch-skills/plugins/stitch-design/skills/upload-to-stitch
+  content_hash: sha256:e8ddf11677a916e6a4ccf608fafcf0f2a03d548677763c0ca7de6671799c0f99
+- kind: project-relative
+  target: codex
+  value: .agents/skills/upload-to-stitch/scripts/upload_to_stitch.py
+  runtime: null
+  scope: project
+  owners:
+  - google-labs-code/stitch-skills/plugins/stitch-design/skills/upload-to-stitch
+  active_owner: google-labs-code/stitch-skills/plugins/stitch-design/skills/upload-to-stitch
+  content_hash: sha256:8a1313edc967b0edf37074184f43252ccccbf9353f02a7f51f9e8950f96a086a

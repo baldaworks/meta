@@ -38,12 +38,20 @@ case "$1" in
     remove)
         exec git -C "$repo" worktree remove "$tree"
         ;;
-    run)
+    run|beads|git)
         test -f "$tree/.git" || fail "Missing worktree at $tree"
         owner=$(git -C "$repo" rev-parse --path-format=absolute --git-common-dir)
         actual=$(git -C "$tree" rev-parse --path-format=absolute --git-common-dir)
         test "$actual" = "$owner" || fail "$tree belongs to another repository"
         cd "$tree"
+        if [ "$1" = git ]; then
+            shift
+            exec git "$@"
+        fi
+        if [ "$1" = beads ]; then
+            shift
+            exec bd "$@"
+        fi
         for file in Taskfile.yml Taskfile.yaml taskfile.yml taskfile.yaml Taskfile.dist.yml Taskfile.dist.yaml taskfile.dist.yml taskfile.dist.yaml; do
             if [ -f "$file" ]; then
                 printf 'Running %s in %s\n' "$WT_TARGET" "$PWD"

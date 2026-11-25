@@ -1,0 +1,997 @@
+[
+  {
+    "Route": "/qa/ui/",
+    "File": "000.html",
+    "Status": 200
+  },
+  {
+    "Route": "/qa/ui/access",
+    "File": "001.html",
+    "Status": 200
+  },
+  {
+    "Route": "/qa/ui/access-create",
+    "File": "002.html",
+    "Status": 200
+  },
+  {
+    "Route": "/qa/ui/access-empty",
+    "File": "003.html",
+    "Status": 200
+  },
+  {
+    "Route": "/qa/ui/access-error",
+    "File": "004.html",
+    "Status": 200
+  },
+  {
+    "Route": "/qa/ui/access-list",
+    "File": "005.html",
+    "Status": 200
+  },
+  {
+    "Route": "/qa/ui/access-long",
+    "File": "006.html",
+    "Status": 200
+  },
+  {
+    "Route": "/qa/ui/access-primary",
+    "File": "007.html",
+    "Status": 200
+  },
+  {
+    "Route": "/qa/ui/access/users/user-demo",
+    "File": "008.html",
+    "Status": 200
+  },
+  {
+    "Route": "/qa/ui/account",
+    "File": "009.html",
+    "Status": 200
+  },
+  {
+    "Route": "/qa/ui/account-2fa-enabled",
+    "File": "010.html",
+    "Status": 200
+  },
+  {
+    "Route": "/qa/ui/account-2fa-off",
+    "File": "011.html",
+    "Status": 200
+  },
+  {
+    "Route": "/qa/ui/account-2fa-unavailable",
+    "File": "012.html",
+    "Status": 200
+  },
+  {
+    "Route": "/qa/ui/account-empty",
+    "File": "013.html",
+    "Status": 200
+  },
+  {
+    "Route": "/qa/ui/account-error",
+    "File": "014.html",
+    "Status": 200
+  },
+  {
+    "Route": "/qa/ui/account-many",
+    "File": "015.html",
+    "Status": 200
+  },
+  {
+    "Route": "/qa/ui/account-many-next",
+    "File": "016.html",
+    "Status": 200
+  },
+  {
+    "Route": "/qa/ui/account-session-states",
+    "File": "017.html",
+    "Status": 200
+  },
+  {
+    "Route": "/qa/ui/agent",
+    "File": "018.html",
+    "Status": 200
+  },
+  {
+    "Route": "/qa/ui/aliases",
+    "File": "019.html",
+    "Status": 200
+  },
+  {
+    "Route": "/qa/ui/aliases-conflict",
+    "File": "020.html",
+    "Status": 409
+  },
+  {
+    "Route": "/qa/ui/aliases-empty",
+    "File": "021.html",
+    "Status": 200
+  },
+  {
+    "Route": "/qa/ui/aliases-invalid",
+    "File": "022.html",
+    "Status": 400
+  },
+  {
+    "Route": "/qa/ui/aliases-long",
+    "File": "023.html",
+    "Status": 200
+  },
+  {
+    "Route": "/qa/ui/aliases-unavailable",
+    "File": "024.html",
+    "Status": 503
+  },
+  {
+    "Route": "/qa/ui/aliases/main_chat",
+    "File": "025.html",
+    "Status": 200
+  },
+  {
+    "Route": "/qa/ui/aliases/new",
+    "File": "026.html",
+    "Status": 200
+  },
+  {
+    "Route": "/qa/ui/audit",
+    "File": "027.html",
+    "Status": 200
+  },
+  {
+    "Route": "/qa/ui/audit-empty",
+    "File": "028.html",
+    "Status": 200
+  },
+  {
+    "Route": "/qa/ui/bindings-disabled",
+    "File": "029.html",
+    "Status": 200
+  },
+  {
+    "Route": "/qa/ui/bindings-issued",
+    "File": "030.html",
+    "Status": 200
+  },
+  {
+    "Route": "/qa/ui/bindings-pending",
+    "File": "031.html",
+    "Status": 200
+  },
+  {
+    "Route": "/qa/ui/bindings-unavailable",
+    "File": "032.html",
+    "Status": 200
+  },
+  {
+    "Route": "/qa/ui/chat-sessions",
+    "File": "033.html",
+    "Status": 200
+  },
+  {
+    "Route": "/qa/ui/chat-sessions-empty",
+    "File": "034.html",
+    "Status": 200
+  },
+  {
+    "Route": "/qa/ui/chat-sessions-forbidden",
+    "File": "035.html",
+    "Status": 403
+  },
+  {
+    "Route": "/qa/ui/chat-sessions-invalid",
+    "File": "036.html",
+    "Status": 400
+  },
+  {
+    "Route": "/qa/ui/chat-sessions-missing",
+    "File": "037.html",
+    "Status": 404
+  },
+  {
+    "Route": "/qa/ui/chat-sessions-unavailable",
+    "File": "038.html",
+    "Status": 503
+  },
+  {
+    "Route": "/qa/ui/chat-sessions/after",
+    "File": "039.html",
+    "Status": 200
+  },
+  {
+    "Route": "/qa/ui/chat-sessions/before",
+    "File": "040.html",
+    "Status": 200
+  },
+  {
+    "Route": "/qa/ui/chat-sessions/closed",
+    "File": "041.html",
+    "Status": 200
+  },
+  {
+    "Route": "/qa/ui/chat-sessions/empty",
+    "File": "042.html",
+    "Status": 200
+  },
+  {
+    "Route": "/qa/ui/chat-sessions/group",
+    "File": "043.html",
+    "Status": 200
+  },
+  {
+    "Route": "/qa/ui/chat-sessions/long",
+    "File": "044.html",
+    "Status": 200
+  },
+  {
+    "Route": "/qa/ui/chat-sessions/partial",
+    "File": "045.html",
+    "Status": 200
+  },
+  {
+    "Route": "/qa/ui/chat-sessions/pending",
+    "File": "046.html",
+    "Status": 200
+  },
+  {
+    "Route": "/qa/ui/chat-sessions/uncertain",
+    "File": "047.html",
+    "Status": 200
+  },
+  {
+    "Route": "/qa/ui/chat-sessions/unknown",
+    "File": "048.html",
+    "Status": 200
+  },
+  {
+    "Route": "/qa/ui/error",
+    "File": "049.html",
+    "Status": 200
+  },
+  {
+    "Route": "/qa/ui/form-bad-request",
+    "File": "050.html",
+    "Status": 400
+  },
+  {
+    "Route": "/qa/ui/form-conflict",
+    "File": "051.html",
+    "Status": 409
+  },
+  {
+    "Route": "/qa/ui/form-forbidden",
+    "File": "052.html",
+    "Status": 403
+  },
+  {
+    "Route": "/qa/ui/form-server-error",
+    "File": "053.html",
+    "Status": 500
+  },
+  {
+    "Route": "/qa/ui/hooks",
+    "File": "054.html",
+    "Status": 200
+  },
+  {
+    "Route": "/qa/ui/hooks-conflict",
+    "File": "055.html",
+    "Status": 409
+  },
+  {
+    "Route": "/qa/ui/hooks-empty",
+    "File": "056.html",
+    "Status": 200
+  },
+  {
+    "Route": "/qa/ui/hooks-invalid",
+    "File": "057.html",
+    "Status": 400
+  },
+  {
+    "Route": "/qa/ui/hooks-long",
+    "File": "058.html",
+    "Status": 200
+  },
+  {
+    "Route": "/qa/ui/hooks-tool-after",
+    "File": "059.html",
+    "Status": 200
+  },
+  {
+    "Route": "/qa/ui/hooks-tool-before",
+    "File": "060.html",
+    "Status": 200
+  },
+  {
+    "Route": "/qa/ui/hooks-unavailable",
+    "File": "061.html",
+    "Status": 503
+  },
+  {
+    "Route": "/qa/ui/hooks-unsupported",
+    "File": "062.html",
+    "Status": 400
+  },
+  {
+    "Route": "/qa/ui/hooks/guard",
+    "File": "063.html",
+    "Status": 200
+  },
+  {
+    "Route": "/qa/ui/hooks/new",
+    "File": "064.html",
+    "Status": 200
+  },
+  {
+    "Route": "/qa/ui/layout",
+    "File": "065.html",
+    "Status": 200
+  },
+  {
+    "Route": "/qa/ui/layout-long",
+    "File": "066.html",
+    "Status": 200
+  },
+  {
+    "Route": "/qa/ui/login",
+    "File": "067.html",
+    "Status": 200
+  },
+  {
+    "Route": "/qa/ui/login-error",
+    "File": "068.html",
+    "Status": 200
+  },
+  {
+    "Route": "/qa/ui/mcp",
+    "File": "069.html",
+    "Status": 200
+  },
+  {
+    "Route": "/qa/ui/mcp-auth-required",
+    "File": "070.html",
+    "Status": 200
+  },
+  {
+    "Route": "/qa/ui/mcp-authorization-retry",
+    "File": "071.html",
+    "Status": 200
+  },
+  {
+    "Route": "/qa/ui/mcp-authorization-unavailable",
+    "File": "072.html",
+    "Status": 503
+  },
+  {
+    "Route": "/qa/ui/mcp-authorizing",
+    "File": "073.html",
+    "Status": 200
+  },
+  {
+    "Route": "/qa/ui/mcp-conflict",
+    "File": "074.html",
+    "Status": 409
+  },
+  {
+    "Route": "/qa/ui/mcp-device-authorized",
+    "File": "075.html",
+    "Status": 200
+  },
+  {
+    "Route": "/qa/ui/mcp-device-denied",
+    "File": "076.html",
+    "Status": 200
+  },
+  {
+    "Route": "/qa/ui/mcp-device-expired",
+    "File": "077.html",
+    "Status": 200
+  },
+  {
+    "Route": "/qa/ui/mcp-device-failed",
+    "File": "078.html",
+    "Status": 200
+  },
+  {
+    "Route": "/qa/ui/mcp-device-issued",
+    "File": "079.html",
+    "Status": 200
+  },
+  {
+    "Route": "/qa/ui/mcp-device-pending",
+    "File": "080.html",
+    "Status": 200
+  },
+  {
+    "Route": "/qa/ui/mcp-empty",
+    "File": "081.html",
+    "Status": 200
+  },
+  {
+    "Route": "/qa/ui/mcp-invalid",
+    "File": "082.html",
+    "Status": 400
+  },
+  {
+    "Route": "/qa/ui/mcp-oauth-return",
+    "File": "083.html",
+    "Status": 200
+  },
+  {
+    "Route": "/qa/ui/mcp-probe",
+    "File": "084.html",
+    "Status": 200
+  },
+  {
+    "Route": "/qa/ui/mcp-public",
+    "File": "085.html",
+    "Status": 200
+  },
+  {
+    "Route": "/qa/ui/mcp-retained",
+    "File": "086.html",
+    "Status": 200
+  },
+  {
+    "Route": "/qa/ui/mcp-revoked",
+    "File": "087.html",
+    "Status": 200
+  },
+  {
+    "Route": "/qa/ui/mcp-saved-start-failed",
+    "File": "088.html",
+    "Status": 503
+  },
+  {
+    "Route": "/qa/ui/mcp-stdio",
+    "File": "089.html",
+    "Status": 200
+  },
+  {
+    "Route": "/qa/ui/mcp-unavailable",
+    "File": "090.html",
+    "Status": 503
+  },
+  {
+    "Route": "/qa/ui/mcp/connections/config:qa-worker",
+    "File": "091.html",
+    "Status": 200
+  },
+  {
+    "Route": "/qa/ui/mcp/connections/qa-worker",
+    "File": "092.html",
+    "Status": 200
+  },
+  {
+    "Route": "/qa/ui/mcp/new",
+    "File": "093.html",
+    "Status": 200
+  },
+  {
+    "Route": "/qa/ui/memory",
+    "File": "094.html",
+    "Status": 200
+  },
+  {
+    "Route": "/qa/ui/memory-conflict",
+    "File": "095.html",
+    "Status": 409
+  },
+  {
+    "Route": "/qa/ui/memory-delete",
+    "File": "096.html",
+    "Status": 200
+  },
+  {
+    "Route": "/qa/ui/memory-disabled",
+    "File": "097.html",
+    "Status": 200
+  },
+  {
+    "Route": "/qa/ui/memory-empty",
+    "File": "098.html",
+    "Status": 200
+  },
+  {
+    "Route": "/qa/ui/memory-forbidden",
+    "File": "099.html",
+    "Status": 403
+  },
+  {
+    "Route": "/qa/ui/memory-invalid",
+    "File": "100.html",
+    "Status": 400
+  },
+  {
+    "Route": "/qa/ui/memory-long",
+    "File": "101.html",
+    "Status": 200
+  },
+  {
+    "Route": "/qa/ui/memory-missing",
+    "File": "102.html",
+    "Status": 404
+  },
+  {
+    "Route": "/qa/ui/memory-no-results",
+    "File": "103.html",
+    "Status": 200
+  },
+  {
+    "Route": "/qa/ui/memory-search",
+    "File": "104.html",
+    "Status": 200
+  },
+  {
+    "Route": "/qa/ui/memory-unavailable",
+    "File": "105.html",
+    "Status": 503
+  },
+  {
+    "Route": "/qa/ui/memory/1",
+    "File": "106.html",
+    "Status": 200
+  },
+  {
+    "Route": "/qa/ui/memory/new",
+    "File": "107.html",
+    "Status": 200
+  },
+  {
+    "Route": "/qa/ui/overview",
+    "File": "108.html",
+    "Status": 200
+  },
+  {
+    "Route": "/qa/ui/overview-empty",
+    "File": "109.html",
+    "Status": 200
+  },
+  {
+    "Route": "/qa/ui/password",
+    "File": "110.html",
+    "Status": 200
+  },
+  {
+    "Route": "/qa/ui/password-error",
+    "File": "111.html",
+    "Status": 200
+  },
+  {
+    "Route": "/qa/ui/plugins",
+    "File": "112.html",
+    "Status": 200
+  },
+  {
+    "Route": "/qa/ui/plugins-callee",
+    "File": "113.html",
+    "Status": 200
+  },
+  {
+    "Route": "/qa/ui/plugins-conflict",
+    "File": "114.html",
+    "Status": 409
+  },
+  {
+    "Route": "/qa/ui/plugins-degraded",
+    "File": "115.html",
+    "Status": 200
+  },
+  {
+    "Route": "/qa/ui/plugins-detail-long",
+    "File": "116.html",
+    "Status": 200
+  },
+  {
+    "Route": "/qa/ui/plugins-disabled",
+    "File": "117.html",
+    "Status": 200
+  },
+  {
+    "Route": "/qa/ui/plugins-install-empty",
+    "File": "118.html",
+    "Status": 200
+  },
+  {
+    "Route": "/qa/ui/plugins-installed",
+    "File": "119.html",
+    "Status": 200
+  },
+  {
+    "Route": "/qa/ui/plugins-marketplace-conflict",
+    "File": "120.html",
+    "Status": 409
+  },
+  {
+    "Route": "/qa/ui/plugins-marketplace-failed",
+    "File": "121.html",
+    "Status": 200
+  },
+  {
+    "Route": "/qa/ui/plugins-marketplace-invalid",
+    "File": "122.html",
+    "Status": 400
+  },
+  {
+    "Route": "/qa/ui/plugins-marketplace-long",
+    "File": "123.html",
+    "Status": 200
+  },
+  {
+    "Route": "/qa/ui/plugins-marketplace-unavailable",
+    "File": "124.html",
+    "Status": 503
+  },
+  {
+    "Route": "/qa/ui/plugins-marketplaces-empty",
+    "File": "125.html",
+    "Status": 200
+  },
+  {
+    "Route": "/qa/ui/plugins-pending-remove",
+    "File": "126.html",
+    "Status": 503
+  },
+  {
+    "Route": "/qa/ui/plugins-unavailable",
+    "File": "127.html",
+    "Status": 503
+  },
+  {
+    "Route": "/qa/ui/plugins/install",
+    "File": "128.html",
+    "Status": 200
+  },
+  {
+    "Route": "/qa/ui/plugins/installed/demo",
+    "File": "129.html",
+    "Status": 200
+  },
+  {
+    "Route": "/qa/ui/plugins/installed/demo/upgrade",
+    "File": "130.html",
+    "Status": 200
+  },
+  {
+    "Route": "/qa/ui/plugins/marketplaces",
+    "File": "131.html",
+    "Status": 200
+  },
+  {
+    "Route": "/qa/ui/plugins/marketplaces/definitions/new",
+    "File": "132.html",
+    "Status": 200
+  },
+  {
+    "Route": "/qa/ui/plugins/marketplaces/new",
+    "File": "133.html",
+    "Status": 200
+  },
+  {
+    "Route": "/qa/ui/providers",
+    "File": "134.html",
+    "Status": 200
+  },
+  {
+    "Route": "/qa/ui/providers-conflict",
+    "File": "135.html",
+    "Status": 409
+  },
+  {
+    "Route": "/qa/ui/providers-empty",
+    "File": "136.html",
+    "Status": 200
+  },
+  {
+    "Route": "/qa/ui/providers/configured",
+    "File": "137.html",
+    "Status": 200
+  },
+  {
+    "Route": "/qa/ui/providers/managed",
+    "File": "138.html",
+    "Status": 200
+  },
+  {
+    "Route": "/qa/ui/providers/new",
+    "File": "139.html",
+    "Status": 200
+  },
+  {
+    "Route": "/qa/ui/providers/new/agy",
+    "File": "140.html",
+    "Status": 200
+  },
+  {
+    "Route": "/qa/ui/providers/new/aistudio",
+    "File": "141.html",
+    "Status": 200
+  },
+  {
+    "Route": "/qa/ui/providers/new/codex",
+    "File": "142.html",
+    "Status": 200
+  },
+  {
+    "Route": "/qa/ui/providers/new/openai",
+    "File": "143.html",
+    "Status": 200
+  },
+  {
+    "Route": "/qa/ui/providers/new/opencode",
+    "File": "144.html",
+    "Status": 200
+  },
+  {
+    "Route": "/qa/ui/providers/new/pool",
+    "File": "145.html",
+    "Status": 200
+  },
+  {
+    "Route": "/qa/ui/providers/new/registry",
+    "File": "146.html",
+    "Status": 200
+  },
+  {
+    "Route": "/qa/ui/refresh",
+    "File": "147.html",
+    "Status": 200
+  },
+  {
+    "Route": "/qa/ui/refresh-conflict",
+    "File": "148.html",
+    "Status": 200
+  },
+  {
+    "Route": "/qa/ui/refresh-error",
+    "File": "149.html",
+    "Status": 200
+  },
+  {
+    "Route": "/qa/ui/schedules",
+    "File": "150.html",
+    "Status": 200
+  },
+  {
+    "Route": "/qa/ui/schedules-all",
+    "File": "151.html",
+    "Status": 200
+  },
+  {
+    "Route": "/qa/ui/schedules-config",
+    "File": "152.html",
+    "Status": 200
+  },
+  {
+    "Route": "/qa/ui/schedules-conflict",
+    "File": "153.html",
+    "Status": 409
+  },
+  {
+    "Route": "/qa/ui/schedules-deleted",
+    "File": "154.html",
+    "Status": 200
+  },
+  {
+    "Route": "/qa/ui/schedules-disabled",
+    "File": "155.html",
+    "Status": 200
+  },
+  {
+    "Route": "/qa/ui/schedules-empty",
+    "File": "156.html",
+    "Status": 200
+  },
+  {
+    "Route": "/qa/ui/schedules-history",
+    "File": "157.html",
+    "Status": 200
+  },
+  {
+    "Route": "/qa/ui/schedules-invalid",
+    "File": "158.html",
+    "Status": 400
+  },
+  {
+    "Route": "/qa/ui/schedules-long",
+    "File": "159.html",
+    "Status": 200
+  },
+  {
+    "Route": "/qa/ui/schedules-unavailable",
+    "File": "160.html",
+    "Status": 503
+  },
+  {
+    "Route": "/qa/ui/schedules/daily-summary",
+    "File": "161.html",
+    "Status": 200
+  },
+  {
+    "Route": "/qa/ui/schedules/deleted-summary",
+    "File": "162.html",
+    "Status": 200
+  },
+  {
+    "Route": "/qa/ui/schedules/new",
+    "File": "163.html",
+    "Status": 200
+  },
+  {
+    "Route": "/qa/ui/skills",
+    "File": "164.html",
+    "Status": 200
+  },
+  {
+    "Route": "/qa/ui/skills-conflict",
+    "File": "165.html",
+    "Status": 409
+  },
+  {
+    "Route": "/qa/ui/skills-detail-long",
+    "File": "166.html",
+    "Status": 200
+  },
+  {
+    "Route": "/qa/ui/skills-disabled",
+    "File": "167.html",
+    "Status": 200
+  },
+  {
+    "Route": "/qa/ui/skills-empty",
+    "File": "168.html",
+    "Status": 200
+  },
+  {
+    "Route": "/qa/ui/skills-invalid",
+    "File": "169.html",
+    "Status": 400
+  },
+  {
+    "Route": "/qa/ui/skills-long",
+    "File": "170.html",
+    "Status": 200
+  },
+  {
+    "Route": "/qa/ui/skills-pending",
+    "File": "171.html",
+    "Status": 503
+  },
+  {
+    "Route": "/qa/ui/skills-pending-inventory",
+    "File": "172.html",
+    "Status": 200
+  },
+  {
+    "Route": "/qa/ui/skills-plugin",
+    "File": "173.html",
+    "Status": 200
+  },
+  {
+    "Route": "/qa/ui/skills-review",
+    "File": "174.html",
+    "Status": 200
+  },
+  {
+    "Route": "/qa/ui/skills-unavailable",
+    "File": "175.html",
+    "Status": 503
+  },
+  {
+    "Route": "/qa/ui/skills-unmanaged",
+    "File": "176.html",
+    "Status": 200
+  },
+  {
+    "Route": "/qa/ui/skills-update",
+    "File": "177.html",
+    "Status": 200
+  },
+  {
+    "Route": "/qa/ui/skills/install",
+    "File": "178.html",
+    "Status": 200
+  },
+  {
+    "Route": "/qa/ui/skills/managed/managed-other-synthetic",
+    "File": "179.html",
+    "Status": 200
+  },
+  {
+    "Route": "/qa/ui/skills/managed/managed-synthetic",
+    "File": "180.html",
+    "Status": 200
+  },
+  {
+    "Route": "/qa/ui/style-guide",
+    "File": "181.html",
+    "Status": 200
+  },
+  {
+    "Route": "/qa/ui/webauthn-assert",
+    "File": "182.html",
+    "Status": 200
+  },
+  {
+    "Route": "/qa/ui/webauthn-register",
+    "File": "183.html",
+    "Status": 200
+  },
+  {
+    "Route": "/qa/ui/webhooks",
+    "File": "184.html",
+    "Status": 200
+  },
+  {
+    "Route": "/qa/ui/webhooks-archived",
+    "File": "185.html",
+    "Status": 200
+  },
+  {
+    "Route": "/qa/ui/webhooks-config",
+    "File": "186.html",
+    "Status": 200
+  },
+  {
+    "Route": "/qa/ui/webhooks-conflict",
+    "File": "187.html",
+    "Status": 409
+  },
+  {
+    "Route": "/qa/ui/webhooks-disabled",
+    "File": "188.html",
+    "Status": 200
+  },
+  {
+    "Route": "/qa/ui/webhooks-empty",
+    "File": "189.html",
+    "Status": 200
+  },
+  {
+    "Route": "/qa/ui/webhooks-history",
+    "File": "190.html",
+    "Status": 200
+  },
+  {
+    "Route": "/qa/ui/webhooks-history-empty",
+    "File": "191.html",
+    "Status": 200
+  },
+  {
+    "Route": "/qa/ui/webhooks-invalid",
+    "File": "192.html",
+    "Status": 400
+  },
+  {
+    "Route": "/qa/ui/webhooks-managed",
+    "File": "193.html",
+    "Status": 200
+  },
+  {
+    "Route": "/qa/ui/webhooks-secret",
+    "File": "194.html",
+    "Status": 200
+  },
+  {
+    "Route": "/qa/ui/webhooks-unavailable",
+    "File": "195.html",
+    "Status": 503
+  },
+  {
+    "Route": "/qa/ui/webhooks/deployed",
+    "File": "196.html",
+    "Status": 200
+  },
+  {
+    "Route": "/qa/ui/webhooks/new",
+    "File": "197.html",
+    "Status": 200
+  },
+  {
+    "Route": "/qa/ui/webhooks/orders",
+    "File": "198.html",
+    "Status": 200
+  }
+]

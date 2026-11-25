@@ -1,0 +1,30 @@
+Source	Link	Target
+/qa/ui/access-primary	Refresh bindings	/qa/ui/access/users/primary-demo
+/qa/ui/aliases	alerts	/qa/ui/aliases/alerts
+/qa/ui/hooks	Edit session-note	/qa/ui/hooks/session-note
+/qa/ui/hooks-long	Edit session-note	/qa/ui/hooks/session-note
+/qa/ui/hooks-unavailable	Edit session-note	/qa/ui/hooks/session-note
+/qa/ui/mcp-device-authorized	Refresh authorization status	/qa/ui/mcp/oauth/device/qa-attempt
+/qa/ui/mcp-device-denied	Refresh authorization status	/qa/ui/mcp/oauth/device/qa-attempt
+/qa/ui/mcp-device-expired	Refresh authorization status	/qa/ui/mcp/oauth/device/qa-attempt
+/qa/ui/mcp-device-failed	Refresh authorization status	/qa/ui/mcp/oauth/device/qa-attempt
+/qa/ui/mcp-device-issued	Refresh authorization status	/qa/ui/mcp/oauth/device/qa-attempt
+/qa/ui/mcp-device-pending	Refresh authorization status	/qa/ui/mcp/oauth/device/qa-attempt
+/qa/ui/memory	Edit fact 2	/qa/ui/memory/2
+/qa/ui/memory-long	Edit fact 2	/qa/ui/memory/2
+/qa/ui/plugins-marketplace-conflict	Open installed	/qa/ui/plugins/installed/installed-demo
+/qa/ui/plugins-marketplace-failed	Open installed	/qa/ui/plugins/installed/installed-demo
+/qa/ui/plugins-marketplace-long	Open installed	/qa/ui/plugins/installed/installed-demo
+/qa/ui/plugins-marketplace-unavailable	Open installed	/qa/ui/plugins/installed/installed-demo
+/qa/ui/plugins/install	Open marketplace to refresh discovery	/qa/ui/plugins/marketplaces/definitions/team
+/qa/ui/plugins/marketplaces/definitions/new	Open installed	/qa/ui/plugins/installed/installed-demo
+/qa/ui/providers	configured-pool	/qa/ui/providers/configured-pool
+/qa/ui/providers	managed-codex	/qa/ui/providers/managed-codex
+/qa/ui/providers-conflict	Refresh state	/qa/ui/providers/managed-codex
+/qa/ui/providers/configured	Refresh state	/qa/ui/providers/configured-pool
+/qa/ui/providers/managed	Refresh state	/qa/ui/providers/managed-codex
+/qa/ui/schedules	config:morning	/qa/ui/schedules/config:morning
+/qa/ui/schedules-all	config:morning	/qa/ui/schedules/config:morning
+/qa/ui/schedules-config	Refresh state	/qa/ui/schedules/config:morning
+/qa/ui/schedules-config	2026-09-23 10:00 UTC	/qa/ui/schedules/config:morning?run_id=qa-run-succeeded
+/qa/ui/schedules-config	2026-09-22 10:00 UTC	/qa/ui/schedules/config:morning?run_id=qa-run-failed
