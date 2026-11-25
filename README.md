@@ -24,10 +24,10 @@ Each meta commit pins the workspace projects as Git submodules under `projects/`
 
 ## Get started
 
-Clone `baldaworks/meta` with your Git client. From the checkout root, use [Task](https://taskfile.dev/) v3.44 or later to initialize the pinned projects and list available operations.
+Clone `baldaworks/meta` with your Git client. With [Task](https://taskfile.dev/) v3.44 or later and the [APM CLI](https://microsoft.github.io/apm/) on your `PATH`, run the following from the checkout root to initialize the pinned projects, install the locked skills locally and list available operations.
 
 ```sh
-task sync:pins
+task init
 task --list
 ```
 

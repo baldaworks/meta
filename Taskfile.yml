@@ -40,6 +40,14 @@ includes:
     dir: ./projects/mcpdump
 
 tasks:
+  init:
+    desc: Check out the recorded project pins and install the locked workspace skills locally
+    cmds:
+      - task: sync:pins
+      - task: apm:install
+        vars:
+          GLOBAL: 'false'
+
   sync:git:
     desc: Run a Git operation in the meta repository
     cmds:
